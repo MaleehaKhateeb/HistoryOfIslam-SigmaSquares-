@@ -13,7 +13,8 @@ class _timelineState extends State<timeline> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text("Timeline of the Prophet Muhammad SA",style: TextStyle(
+          title: Text("Timeline of the Prophet Muhammad SA",
+             style: TextStyle(
              fontFamily: "bold",
           ),),
           backgroundColor:Color.fromARGB(255, 2, 46, 45),

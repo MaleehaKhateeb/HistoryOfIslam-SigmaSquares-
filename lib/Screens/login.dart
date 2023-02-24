@@ -31,7 +31,8 @@ class _loginState extends State<login> {
           children: [
            Spacer(),
             Center(
-                child: Text("History Of Islam" ,
+                child: Text(
+                  "History Of Islam" ,
                 maxLines: 1,
                 style: TextStyle(
                 fontFamily: 'GreatVibes',
@@ -46,21 +47,30 @@ class _loginState extends State<login> {
                  children: [
                   TextInputField(
                     cont: email_controller,
-                    hint: "Email",icon: FontAwesomeIcons.envelope,inputAction: TextInputAction.next,inputType:TextInputType.emailAddress),
+                    hint: "Email",
+                    icon: FontAwesomeIcons.envelope,
+                    inputAction: TextInputAction.next,
+                    inputType:TextInputType.emailAddress),
                  passwordInput(
                   cont: pwd_controller,
-                  hint: "Password",icon: FontAwesomeIcons.lock,inputAction: TextInputAction.done,inputType:TextInputType.name),
+                  hint: "Password",
+                  icon: FontAwesomeIcons.lock,
+                  inputAction: TextInputAction.done,
+                  inputType:TextInputType.name),
               GestureDetector(
-                onTap:() => Navigator.push(context,  MaterialPageRoute(builder: (context) => const ForgotPassword()),),
-                child:Container(
+                onTap:() => Navigator.push(
+                  context, 
+                   MaterialPageRoute(builder: (context) => const ForgotPassword()),),
+                   child:Container(
                    height:size.height* 0.052,
-        width:size.width* 0.52,
-        decoration: BoxDecoration(
-          color: Color.fromARGB(255, 1, 90, 82).withOpacity(0.5),
-          borderRadius: BorderRadius.circular(16),
+                   width:size.width* 0.52,
+                   decoration: BoxDecoration(
+                   color: Color.fromARGB(255, 1, 90, 82).withOpacity(0.5),
+                   borderRadius: BorderRadius.circular(16),
         ),
         child: Center(
-          child: Text("Forgot Password", style: bodytext,
+          child: Text("Forgot Password", 
+          style: bodytext,
                   ),
         ) ,
                ),
@@ -69,8 +79,9 @@ class _loginState extends State<login> {
                 height: 25,
               ),
               const RoundedButton(
-                
+                //Login Button 
               ),
+              //Space between widgets
                SizedBox(
                 height: 25,
               ),
@@ -81,7 +92,8 @@ class _loginState extends State<login> {
                 onTap: () {
                    Navigator.push(
                  context,
-                MaterialPageRoute(builder: (context) => const CreateNewAccount()),);
+                MaterialPageRoute(
+                  builder: (context) => const CreateNewAccount()),);
                 },
                 child: Container(
                   child: Text(

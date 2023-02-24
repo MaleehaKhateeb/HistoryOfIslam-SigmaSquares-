@@ -23,7 +23,8 @@ class SlidedScreensState extends State<SlidedScreens> {
 
     slides.add(
       Slide(
-        title: "History of Islam",styleTitle:TextStyle(
+        title: "History of Islam",
+        styleTitle:TextStyle(
           fontSize: 35,
           fontFamily: "font1",
           fontWeight: FontWeight.bold,
@@ -32,7 +33,8 @@ class SlidedScreensState extends State<SlidedScreens> {
         ) , 
         description:
             "The History of Islam.Here such the important topics about Islamic history.",
-           maxLineTitle: 2, styleDescription: TextStyle(fontSize: 20,
+           maxLineTitle: 2, 
+           styleDescription: TextStyle(fontSize: 20,
              fontFamily: "bold",
             color: Color(0xFFedb97b)),
         pathImage: "assets/Logo.png",heightImage: 320,
@@ -49,11 +51,12 @@ class SlidedScreensState extends State<SlidedScreens> {
         ) , 
         description:
             "Here is Islamic History books in                -   ENGLISH -    ",
-            styleDescription: TextStyle(fontSize: 20,
+            styleDescription: TextStyle(
+             fontSize: 20,
              fontFamily: "bold",
-            color: Color(0xFFedb97b)),
-            pathImage: "assets/book.png",heightImage: 300,
-        backgroundColor:  Color(0xFF043A39),
+             color: Color(0xFFedb97b)),
+             pathImage: "assets/book.png",heightImage: 300,
+             backgroundColor:  Color(0xFF043A39),
       ),
     );
     slides.add(
@@ -69,14 +72,16 @@ class SlidedScreensState extends State<SlidedScreens> {
             styleDescription: TextStyle(fontSize: 20,
              fontFamily: "bold",
             color: Color(0xFFedb97b)),
-        pathImage: "assets/sheep .png", heightImage: 340,
-        backgroundColor:  Color(0xFF043A39),
+            pathImage: "assets/sheep .png",
+            heightImage: 340,
+            backgroundColor:  Color(0xFF043A39),
        
       ),
     );
      slides.add(
       Slide(
-        title: "Islamic Wars",styleTitle:TextStyle(
+        title: "Islamic Wars",
+          styleTitle:TextStyle(
           fontSize: 35,
           fontFamily: "font1",
           fontWeight: FontWeight.bold,
@@ -84,16 +89,19 @@ class SlidedScreensState extends State<SlidedScreens> {
         ) , 
         description:
             "The details of Islamic wars",
-            styleDescription: TextStyle(fontSize: 20,
-             fontFamily: "bold",
+            styleDescription: TextStyle(
+            fontSize: 20,
+            fontFamily: "bold",
             color: Color(0xFFedb97b)),
-        pathImage: "assets/sword.png",heightImage: 300,
-        backgroundColor:    Color(0xFF043A39),
+            pathImage: "assets/sword.png",
+            heightImage: 300,
+            backgroundColor:  Color(0xFF043A39),
       ),
     );
      slides.add(
       Slide(
-        title: "Prophet's life",styleTitle:TextStyle(
+        title: "Prophet's life"
+        ,styleTitle:TextStyle(
           fontSize: 35,
           fontFamily: "font1",
           fontWeight: FontWeight.bold,
@@ -147,8 +155,9 @@ class SlidedScreensState extends State<SlidedScreens> {
   Widget build(BuildContext context) {
     return  Container(
       child: IntroSlider(
-        slides: slides,
-        onDonePress: onDonePress,)
+            slides: slides,
+            onDonePress: onDonePress,
+            )
     ) ;
   }
 }

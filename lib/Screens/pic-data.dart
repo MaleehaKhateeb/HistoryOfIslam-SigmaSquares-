@@ -28,22 +28,29 @@ class _picdataState extends State<picdata> {
       body: ListView(
         children: [
           Container(
-                    height: 200,
-                    width: MediaQuery.of(context).size.width,
+            height: 200,
+            width: MediaQuery.of(context).size.width,
             child: Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 10,right: 8,left: 8),
+                  padding: const EdgeInsets.only(
+                    top: 10,
+                    right: 8,
+                    left: 8),
                   child: Expanded(
                     child: Container(
                       height: 150,
                       width: 100,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.teal , Color.fromARGB(255, 2, 46, 45),]),
+                        gradient: LinearGradient(
+                          colors: [
+                            Colors.teal , Color.fromARGB(255, 2, 46, 45),
+                            ]),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Center(
-                        child: Text("1", style: TextStyle(
+                        child: Text("1",
+                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 70,
                           fontWeight: FontWeight.bold,
@@ -58,11 +65,15 @@ class _picdataState extends State<picdata> {
                child: Column(
                 children: [
                      Padding(
-                       padding: const EdgeInsets.only(top: 50,right: 8, bottom: 8),
+                       padding: const EdgeInsets.only(
+                        top: 50,
+                        right: 8, 
+                        bottom: 8),
                        child: Container(
                         height: 50,
                         child: Center(
-                          child: Text("Pictorial representation of Muhammad's Life",style: TextStyle(
+                          child: Text("Pictorial representation of Muhammad's Life",
+                          style: TextStyle(
                             fontSize: 18,
                              fontFamily: "font2",
                             fontWeight: FontWeight.bold,
@@ -75,7 +86,10 @@ class _picdataState extends State<picdata> {
                    
              
                 Padding(
-                   padding: const EdgeInsets.only(top: 0,right: 8, bottom: 10),
+                   padding: const EdgeInsets.only(
+                    top: 0,
+                    right: 8,
+                     bottom: 10),
                    child: Container(
                     height: 70,
                     child: SlideAction(
@@ -89,7 +103,8 @@ class _picdataState extends State<picdata> {
                       fontSize: 20
                     ),
                     onSubmit: () {
-                     Navigator.push(context, MaterialPageRoute(builder: (context)=> ProphetAges()));
+                     Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=> ProphetAges()));
                     },
                     ),
                     
@@ -108,13 +123,19 @@ class _picdataState extends State<picdata> {
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 10,right: 8,left: 8),
+              padding: const EdgeInsets.only(
+                top: 10,
+                right: 8,
+                left: 8),
               child: Expanded(
                 child: Container(
                   height: 150,
                   width: 100,
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [Colors.teal , Color.fromARGB(255, 2, 46, 45),]),
+                    gradient: LinearGradient(
+                      colors: [
+                        Colors.teal , Color.fromARGB(255, 2, 46, 45),
+                        ]),
                     borderRadius: BorderRadius.circular(10),
                   ),
                    child: Center(
@@ -132,7 +153,10 @@ class _picdataState extends State<picdata> {
            child: Column(
             children: [
                  Padding(
-                   padding: const EdgeInsets.only(top: 50,right: 8, bottom: 8),
+                   padding: const EdgeInsets.only(
+                    top: 50,
+                    right: 8,
+                    bottom: 8),
                    child: Container(
                     height: 50,
                     child: Center(
@@ -147,7 +171,10 @@ class _picdataState extends State<picdata> {
                  ),
              
                 Padding(
-                   padding: const EdgeInsets.only(top: 0,right: 8, bottom: 10),
+                   padding: const EdgeInsets.only(
+                    top: 0,
+                    right: 8,
+                    bottom: 10),
                    child: Container(
                     height: 70,
                     child: SlideAction(
@@ -161,7 +188,8 @@ class _picdataState extends State<picdata> {
                       color: Color(0xFFedb97b)
                     ),
                     onSubmit: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> FamilyOfProphet()));
+                    Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=> FamilyOfProphet()));
                     },
                     ),
                     
@@ -180,13 +208,18 @@ class _picdataState extends State<picdata> {
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 10,right: 8,left: 8),
+              padding: const EdgeInsets.only(
+                top: 10,
+                right: 8,
+                left: 8),
               child: Expanded(
                 child: Container(
                   height: 150,
                   width: 100,
                   decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [Colors.teal , Color.fromARGB(255, 2, 46, 45),]),
+                    gradient: LinearGradient(colors: [
+                      Colors.teal , Color.fromARGB(255, 2, 46, 45),
+                      ]),
                     borderRadius: BorderRadius.circular(10),
                   ),
                    child: Center(
@@ -204,7 +237,10 @@ class _picdataState extends State<picdata> {
            child: Column(
             children: [
                  Padding(
-                   padding: const EdgeInsets.only(top: 50,right: 8, bottom: 8),
+                   padding: const EdgeInsets.only(
+                    top: 50,
+                    right: 8,
+                    bottom: 8),
                    child: Container(
                     height: 50,
                     child: Center(
@@ -219,7 +255,10 @@ class _picdataState extends State<picdata> {
                  ),
              
                 Padding(
-                   padding: const EdgeInsets.only(top: 0,right: 8, bottom: 10),
+                   padding: const EdgeInsets.only(
+                    top: 0,
+                    right: 8, 
+                    bottom: 10),
                    child: Container(
                     height: 70,
                     child: SlideAction(
@@ -233,7 +272,8 @@ class _picdataState extends State<picdata> {
                       color: Color(0xFFedb97b)
                     ),
                     onSubmit: () {
-                     Navigator.push(context, MaterialPageRoute(builder: (context)=> AgeAndSentArea()));
+                     Navigator.push(context,
+                      MaterialPageRoute(builder: (context)=> AgeAndSentArea()));
                     },
                     ),
                     

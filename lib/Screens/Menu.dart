@@ -25,7 +25,8 @@ class MenuState extends State<Menu> {
   Widget build(BuildContext context) {
     return  Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(topRight: Radius.circular(30),
+            borderRadius: BorderRadius.only(
+            topRight: Radius.circular(30),
             bottomRight: Radius.circular(30)),
             gradient: LinearGradient(colors: [
               Color(0xFF043A39),
@@ -42,10 +43,10 @@ class MenuState extends State<Menu> {
               Container(
                 child: InkWell(
                 onTap: () {
- Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const Home()),
-  );                },
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Home()),
+                    );                },
                child: Padding(padding: EdgeInsets.all(15),
                child: Row(
                 children: [
@@ -79,10 +80,10 @@ class MenuState extends State<Menu> {
                Container(
                 child: InkWell(
                 onTap: () {
-        Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const MainBooks()),
-  );
+                      Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MainBooks()),
+                );
 
                 },
                child: Padding(padding: EdgeInsets.all(15),
@@ -113,7 +114,8 @@ class MenuState extends State<Menu> {
                Container(
                 child: InkWell(
                 onTap: () {
-       Navigator.push(context, MaterialPageRoute(builder: (context)=> const prophet()));
+                   Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=> const prophet()));
 
                 },
                child: Padding(padding: EdgeInsets.all(15),
@@ -144,7 +146,8 @@ class MenuState extends State<Menu> {
                Container(
                 child: InkWell(
                 onTap: () {
-         Navigator.push(context, MaterialPageRoute(builder: (context)=> const moredata()));
+                  Navigator.push(context,
+                    MaterialPageRoute(builder: (context)=> const moredata()));
 
                 },
                child: Padding(padding: EdgeInsets.all(15),
@@ -175,7 +178,8 @@ class MenuState extends State<Menu> {
                Container(
                 child: InkWell(
                 onTap: () {
-       Navigator.push(context, MaterialPageRoute(builder: (context)=> const bookmark()));
+                 Navigator.push(context,
+                  MaterialPageRoute(builder: (context)=> const bookmark()));
 
                 },
                child: Padding(padding: EdgeInsets.all(15),
@@ -206,7 +210,8 @@ class MenuState extends State<Menu> {
                Container(
                 child: InkWell(
                 onTap: () {
-       Navigator.push(context, MaterialPageRoute(builder: (context)=> const picdata()));
+                  Navigator.push(context,
+                   MaterialPageRoute(builder: (context)=> const picdata()));
 
                 },
                child: Padding(padding: EdgeInsets.all(15),

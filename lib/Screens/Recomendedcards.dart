@@ -99,10 +99,15 @@ class RecomendedItems extends StatelessWidget {
     return 
         Container(
          height: 200,
-         margin: EdgeInsets.only(left:20,top: 20/2,bottom: 20*2.5 ),
+         margin: EdgeInsets.only(
+          left:20,
+          top: 20/2,
+          bottom: 20*2.5 ),
          // color: Colors.teal,
-         decoration: BoxDecoration(  color: Color.fromARGB(255, 2, 46, 45).withOpacity(0.8),
-         boxShadow: [BoxShadow(
+         decoration: BoxDecoration( 
+         color: Color.fromARGB(255, 2, 46, 45).withOpacity(0.8),
+         boxShadow: [
+           BoxShadow(
            color: Color.fromARGB(255, 2, 46, 45),
            blurRadius: 20,
          )],
@@ -114,7 +119,9 @@ class RecomendedItems extends StatelessWidget {
            children: [
              Image(
               alignment: Alignment.center,
-              image: AssetImage(image),height: heig ,width: wid,
+              image: AssetImage(image),
+              height: heig ,
+              width: wid,
               fit: BoxFit.fill,
 
              ),
@@ -136,7 +143,9 @@ class RecomendedItems extends StatelessWidget {
                  //  ),
                   
                  // ],
-                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(16),bottomRight: Radius.circular(16),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(16),
+                    bottomRight: Radius.circular(16),
                   ),
                  ),
                  child: Column(

@@ -62,7 +62,9 @@ class _RoundedButtonState extends State<RoundedButton> {
         decoration: BoxDecoration(borderRadius:BorderRadius.circular(16),
         
         ),
-        child: Buttons(buttontext: "Login", onTap: ()async{
+        child: Buttons(
+          buttontext: "Login", 
+          onTap: ()async{
           //var shared_pr = await SharedPreferences.getInstance();
            List<UserModel?> allusers = await UserStorage.getAllUsersData();
             print(allusers);
@@ -97,13 +99,17 @@ class _RoundedButtonState extends State<RoundedButton> {
             }
             if(loginSuccess)
             {
-              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(backgroundColor: Colors.green, content: Text("Login Success")));
+              //Tag display when user pass correct display and navigat to the home screen 
+              ScaffoldMessenger.of(context).
+              showSnackBar(const SnackBar(backgroundColor: Colors.green, content: Text("Login Success")));
                  Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(builder: (context) => const MyDrawer()),);
             }
             else{
-              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(backgroundColor: Colors.red, content: Text("Incorrect details")));
+              //tag Display when user pass in correct details
+              ScaffoldMessenger.of(context).
+              showSnackBar(const SnackBar(backgroundColor: Colors.red, content: Text("Incorrect details")));
             }
          
       

@@ -27,8 +27,8 @@ class _moredataState extends State<moredata> {
       body: ListView(
             children: [
               Container(
-                        height: 200,
-                        width: MediaQuery.of(context).size.width,
+                height: 200,
+                width: MediaQuery.of(context).size.width,
                 child: Row(
                   children: [
                     Padding(
@@ -38,8 +38,12 @@ class _moredataState extends State<moredata> {
                           height: 150,
                           width: 100,
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [Colors.teal , Color(0xFF043A39)]),
-                            image: DecorationImage(image: AssetImage("assets/sword.png")),
+                            gradient: LinearGradient(
+                              colors: [
+                                Colors.teal , Color(0xFF043A39)
+                                ]),
+                            image: DecorationImage(
+                              image: AssetImage("assets/sword.png")),
                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
@@ -80,10 +84,11 @@ class _moredataState extends State<moredata> {
                             ),
                             onSubmit: () async {
                              await 
-                             Navigator.push(context, MaterialPageRoute(builder: (context)=> Gazwat()));
-                             setState(() {
+                             Navigator.push(context, 
+                             MaterialPageRoute(builder: (context)=> Gazwat()));
+                            //  setState(() {
                                
-                             });
+                            //  });
                             },
                             ),
                             

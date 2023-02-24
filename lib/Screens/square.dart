@@ -19,7 +19,11 @@ class _MySquareState extends State<MySquare> {
   @override
   Widget build(BuildContext context) {
     return Container(
-          margin: EdgeInsets.only(top: 8,left: 15,right: 15,bottom: 8),
+          margin: EdgeInsets.only(
+            top: 8,
+            left: 15,
+            right: 15,
+            bottom: 8),
           child: Container(
             height: 80,
             width: MediaQuery.of(context).size.width,
@@ -37,7 +41,8 @@ class _MySquareState extends State<MySquare> {
               children: [
                 Container(
                   margin: EdgeInsets.only(left:10),
-                  child: Text(widget.name,
+                  child: Text(
+                    widget.name,
                    style: TextStyle(
                       fontSize: 20,
                       fontFamily: "font2",

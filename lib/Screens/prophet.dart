@@ -19,6 +19,7 @@ class prophet extends StatefulWidget {
 
 class _prophetState extends State<prophet> {
  int sideLength = 150;
+ //List of Prophets Names to display the names on Screen 
  final List name = [
 'Hazarat Adam (A.S)',
 'Hazarat Idrees (A.S)',
@@ -68,7 +69,8 @@ class _prophetState extends State<prophet> {
         itemBuilder: ((context, index) {
          return InkWell(
           onTap: () {
-         Navigator.push(context, MaterialPageRoute(builder: (context)=> prophetdetails()));
+         Navigator.push(context,
+          MaterialPageRoute(builder: (context)=> prophetdetails()));
             
           },
            child: MySquare(
