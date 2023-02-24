@@ -28,12 +28,17 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
     Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
-        BackgroundImage(image: "assets/Masjid welcome.png"),
+        BackgroundImage(
+          image: "assets/Masjid welcome.png"),
          
             BackdropFilter(
-            filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
-            child: new Container(
-              decoration: new BoxDecoration(color: Colors.white.withOpacity(0.0)),
+            filter: ImageFilter.blur(
+              sigmaX: 2, 
+              sigmaY: 2),
+              child: new Container(
+              decoration: 
+              new BoxDecoration(
+                color: Colors.white.withOpacity(0.0)),
             ),
                  
          ),
@@ -66,9 +71,10 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
                           child: CircleAvatar(
                              radius: size.width*0.12,
                             backgroundColor:dark.withOpacity(0.5),
-                            child: Icon(FontAwesomeIcons.user,
-                            color: Colors.white ,
-                            size: size.width*0.1,),),
+                            child: Icon(
+                              FontAwesomeIcons.user,
+                              color: Colors.white ,
+                              size: size.width*0.1,),),
                   //)
                   ),
                    Positioned(
@@ -77,11 +83,15 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
                 child: Container(
                   width: size.width*0.09,
                   height: size.height*0.12,
-                  decoration: BoxDecoration(color: Colors.white.withOpacity(0.8),border: Border.all(
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.8),
+                    border: Border.all(
                     color: Colors.white,
                     width: 2
-                  ),shape: BoxShape.circle ),
-                  child: Icon(FontAwesomeIcons.arrowUp,color:dark,),
+                  ),
+                  shape: BoxShape.circle ),
+                  child: Icon(
+                    FontAwesomeIcons.arrowUp,color:dark,),
                 ),
               ),
                 ],
@@ -122,7 +132,9 @@ class _CreateNewAccountState extends State<CreateNewAccount> {
                   Container(
                     height: size.height * 0.09,
                     width: size.width * 0.9,
-                    child: Buttons(buttontext: 'Register', onTap: ()async{
+                    child: Buttons(
+                      buttontext: 'Register', 
+                      onTap: ()async{
                        if(
                         pws_controller.text.toString() 
                         == 

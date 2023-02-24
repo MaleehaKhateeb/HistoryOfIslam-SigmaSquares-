@@ -26,7 +26,8 @@ class _FamilyOfProphetState extends State<FamilyOfProphet> {
       body: 
         Container(
           child: PhotoView(
-      imageProvider: AssetImage("assets/familytreeofprophets.jpg"),
+      imageProvider: 
+      AssetImage("assets/familytreeofprophets.jpg"),
       ),
         ),
     );

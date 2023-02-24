@@ -6,6 +6,8 @@ import 'package:islamic_app/Widgets/Button.dart';
 import '../Widgets/BackgroundImage.dart';
 import '../Widgets/Colors.dart';
 import '../Widgets/PasswordTextField.dart';
+
+//Controller for get the values of Textfields
 final pcontroller = TextEditingController();
 final pwcontroller  = TextEditingController();
 class emailcheck extends StatefulWidget {
@@ -23,7 +25,8 @@ class _emailcheckState extends State<emailcheck> {
     Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
-        BackgroundImage(image: "assets/Masjid welcome.png"),
+        BackgroundImage(
+          image: "assets/Masjid welcome.png"),
         Scaffold(
           backgroundColor: Colors.transparent,
           appBar:AppBar(
@@ -61,25 +64,20 @@ class _emailcheckState extends State<emailcheck> {
             SizedBox(
                        height: 5,
                     ),
-                    Container(
+            Container(
                       height: size.height*0.09,
-      width: size.width*0.9,
-      decoration: BoxDecoration(borderRadius:BorderRadius.circular(16),
-      ),),
-      Buttons(buttontext: "Done", onTap: (){
-         Navigator.push(
-                 context,
-                MaterialPageRoute(builder: (context) => const MyDrawer()),);
+                      width: size.width*0.9,
+                      decoration: BoxDecoration(borderRadius:BorderRadius.circular(16),
+                      ),),
+            Buttons(
+              buttontext: "Done", onTap: (){
+                    Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => const MyDrawer()),);
       })
         ],
       ), 
     ),
-        //             ),
-        //     ]),
-        //     ),
-        //     ]),
-        // ),
-
       ]);
   }
 }

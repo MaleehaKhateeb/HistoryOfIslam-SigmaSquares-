@@ -17,9 +17,14 @@ class _ProfetDetailsState extends State<ProfetDetails> {
       body: SafeArea(
         child: Container(
           padding: const  EdgeInsets.all(20),
+          //Width of Container
            width: Constants.getWidth(context),
-        height: Constants.getHeight(context),
-        child: Text(widget.profetData['history[Topic]'] == "N/A" ? "" :widget.profetData['history[Topic]'] ),
+          //Height of Container
+           height: Constants.getHeight(context),
+           child: Text(
+              widget.profetData['history'] == "N/A" ? "" 
+              :
+              widget.profetData['history'] ),
         ),
       ),
     );

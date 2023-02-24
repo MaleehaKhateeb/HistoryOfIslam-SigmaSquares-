@@ -11,7 +11,8 @@ class _GazwatState extends State<Gazwat> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Ghazwaat",style: TextStyle(
+        title: Text("Ghazwaat",
+        style: TextStyle(
           color: Color(0xFFedb97b),
           fontFamily: "bold",
           fontSize: 25
@@ -20,7 +21,8 @@ class _GazwatState extends State<Gazwat> {
         backgroundColor: Color(0xFF043A39),
       ),
       body:Center(
-        child: Text("Comming Soon.......",style: TextStyle(
+        child: Text("Comming Soon.......",
+        style: TextStyle(
           fontSize: 30,
           color: Color(0xFF043A39),
         ),),

@@ -27,10 +27,20 @@ child: ListView.builder(
   itemCount: PROFETSDATA.length,
   itemBuilder:(context, index) {
   return ListTile(
-    title: Text(PROFETSDATA[index]['prophet_name'].toString(), style: const TextStyle(fontSize: 18),),
-    trailing: const Icon(Icons.arrow_forward_ios_rounded),
+    title: Text(
+      PROFETSDATA[index]['prophet_name'].toString(),
+            style: const TextStyle(
+              fontSize: 18
+        ),),
+    trailing: const Icon(
+            Icons.arrow_forward_ios_rounded),
     onTap: (){
-      Navigator.push(context, MaterialPageRoute(builder: (context) => ProfetDetails(profetData: PROFETSDATA[index])));
+      Navigator.push(
+        context, 
+        MaterialPageRoute(
+          builder: (context) => 
+          ProfetDetails(
+            profetData: PROFETSDATA[index])));
     }
     ,
   );

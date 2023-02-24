@@ -66,7 +66,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     // !emailMatched ?
                     TextInputField(
                       cont: econtroler,
-                      icon: FontAwesomeIcons.envelope, hint: 'Email', inputType: TextInputType.emailAddress, inputAction: TextInputAction.next),
+                      icon: FontAwesomeIcons.envelope,
+                      hint: 'Email',
+                      inputType: TextInputType.emailAddress,
+                      inputAction: TextInputAction.next),
                     
                    
       // Column(

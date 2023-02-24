@@ -173,12 +173,38 @@ class _HomeState extends State<Home> {
       },
       currentIndex: activeScreenIndex,
       items: [
-      BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.houseChimney),label: "Home",backgroundColor: Color.fromARGB(255, 2, 46, 45)),
-      BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.book),label: "Books",backgroundColor: Color.fromARGB(255, 2, 46, 45)),
-      BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.userLarge),label: "Prophet",backgroundColor:Color.fromARGB(255, 2, 46, 45)),
-      BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.solidFlag),label: "About War",backgroundColor: Color.fromARGB(255, 2, 46, 45)),
-      BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.bookBookmark),label: "Bookmarks",backgroundColor: Color.fromARGB(255, 2, 46, 45)),
-      BottomNavigationBarItem(icon: Icon(Icons.more),label: "More",backgroundColor: Color.fromARGB(255, 2, 46, 45)),
+      BottomNavigationBarItem(
+          icon: Icon(
+          FontAwesomeIcons.houseChimney
+          ),
+          label: "Home",
+          backgroundColor: Color.fromARGB(255, 2, 46, 45)
+          ),
+      BottomNavigationBarItem(
+        icon: Icon(
+          FontAwesomeIcons.book),
+        label: "Books",
+        backgroundColor: Color.fromARGB(255, 2, 46, 45)),
+      BottomNavigationBarItem(
+        icon: Icon(
+          FontAwesomeIcons.userLarge),
+        label: "Prophet",
+        backgroundColor:Color.fromARGB(255, 2, 46, 45)),
+      BottomNavigationBarItem(
+        icon: Icon(
+          FontAwesomeIcons.solidFlag),
+          label: "About War",
+          backgroundColor: Color.fromARGB(255, 2, 46, 45)),
+      BottomNavigationBarItem(
+        icon: Icon(
+          FontAwesomeIcons.bookBookmark),
+          label: "Bookmarks",
+          backgroundColor: Color.fromARGB(255, 2, 46, 45)),
+      BottomNavigationBarItem(
+        icon: Icon(
+          Icons.more),
+          label: "More",
+          backgroundColor: Color.fromARGB(255, 2, 46, 45)),
       
      ]),
       );
