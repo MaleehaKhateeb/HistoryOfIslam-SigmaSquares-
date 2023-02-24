@@ -30,9 +30,9 @@ class _ButtonsState extends State<Buttons> {
         child: Text(widget.buttontext,
         textAlign: TextAlign.center,
         style: TextStyle(
-          fontFamily: "font1",
+          fontFamily: "Lato",
           color: dark,
-          fontSize: 24,
+          fontSize: 27,
           fontWeight: FontWeight.bold,
         ),),
       ),

@@ -44,6 +44,9 @@ dependencies:
   flutter_zoom_drawer: ^3.0.3
   shared_preferences: ^2.0.17
   modal_bottom_sheet: ^2.1.2
+  intl: ^0.18.0
+  table_calendar: ^3.0.9
+  pie_chart: ^5.3.2
 
 
 dev_dependencies:
@@ -72,10 +75,10 @@ flutter:
   assets:
         - assets/Masjid welcome.png
         - assets/Logo.png
-        - assets/Kitab.png
+        - assets/book.png
         - assets/Muslim Man (Imam).png
-        - assets/Sheep.png
-        - assets/Sword.png
+        - assets/sheep .png
+        - assets/sword.png
         - assets/Homepic.png
         - assets/Menu.jpg
         - assets/Ant.png
@@ -89,6 +92,7 @@ flutter:
         - assets/English_ArRaheeq_AlMakhtum_THE_SEALED_NECTAR.pdf
         - assets/The Sealed Nectar.jpg
         - assets/chronology.png
+        - assets/main.png
         - assets/history.jpg
         - assets/lesson.jpg
         - assets/History Of Islam 1_text.pdf
@@ -96,7 +100,7 @@ flutter:
         - assets/History Of Islam 3_text.pdf
         - assets/lessonsfromhistory-121224033058-phpapp01.pdf
         - assets/Chronology of Islam.pdf
-        
+        - assets/timeline.png
       # - assets/icons/
       # - assets/images/
   #   - images/a_dot_burr.jpeg
@@ -129,6 +133,13 @@ flutter:
     - family: font2
       fonts:
         - asset: fonts/arial.ttf
+    - family: bold
+      fonts:
+        - asset: fonts/ARLRDBD.ttf
+    - family: Lato
+      fonts:
+        - asset: fonts/Lato-Regular.ttf
+       
         
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic

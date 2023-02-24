@@ -50,9 +50,11 @@ class _prophetState extends State<prophet> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.teal,
+        backgroundColor: Color.fromARGB(255, 2, 46, 45),
         title: Text("Prophet",style: TextStyle(
-           fontFamily: "button",
+           fontFamily: "bold",
+           color: Color(0xFFedb97b),
+           fontSize: 25
         ),),
         titleTextStyle: TextStyle(
           fontWeight: FontWeight.bold,

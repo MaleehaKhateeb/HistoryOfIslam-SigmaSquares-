@@ -11,14 +11,18 @@ class _GazwatState extends State<Gazwat> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Ghazwaat"),
+        title: Text("Ghazwaat",style: TextStyle(
+          color: Color(0xFFedb97b),
+          fontFamily: "bold",
+          fontSize: 25
+        ),),
         centerTitle: true,
-        backgroundColor: Colors.teal,
+        backgroundColor: Color(0xFF043A39),
       ),
       body:Center(
         child: Text("Comming Soon.......",style: TextStyle(
           fontSize: 30,
-          color: Colors.teal,
+          color: Color(0xFF043A39),
         ),),
         
         ),

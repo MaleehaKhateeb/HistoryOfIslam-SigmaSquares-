@@ -18,9 +18,14 @@ class _LifeOfMohammadSAState extends State<LifeOfMohammadSA> {
        decoration: BoxDecoration(color: Colors.teal,),
       child:  Scaffold(
         appBar: AppBar(
-          title: Text("Muhammad's life"),
-          backgroundColor: Colors.teal,
+          title: Text("Muhammad's life",style: TextStyle(
+            fontFamily: "bold",
+            fontSize: 25,
+            color: Color(0xFFedb97b)
+          ),),
+          backgroundColor: Color(0xFF043A39),
           centerTitle: true,
+          
         ),
         body:Container(
           child: PhotoView(

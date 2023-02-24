@@ -45,9 +45,12 @@ class _passwordInputState extends State<passwordInput> {
           obscureText: _isObscure,
           decoration: InputDecoration(
             suffixIcon: IconButton(
-                icon: Icon(
-                  _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,
-                  color: Colors.white,
+                icon: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Icon(
+                    _isObscure ? Icons.visibility_outlined : Icons.visibility_off_outlined,
+                    color: Colors.white,
+                  ),
                 ),
                 onPressed: () {
                   setState(() {  
@@ -56,7 +59,7 @@ class _passwordInputState extends State<passwordInput> {
                   });
                   }),
             border: InputBorder.none,
-            contentPadding: EdgeInsets.only(top: 20),
+            contentPadding: EdgeInsets.only(top: 10),
             hintText: widget.hint,
             hintStyle: bodytext,
             prefixIcon: Padding(

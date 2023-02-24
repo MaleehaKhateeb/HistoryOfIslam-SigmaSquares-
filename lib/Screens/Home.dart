@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_zoom_drawer/config.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:islamic_app/Book.dart';
 import 'package:islamic_app/Bookmain.dart';
 import 'package:islamic_app/Screens/body.dart';
@@ -55,7 +56,12 @@ class _HomeState extends State<Home> {
         itemBuilder:(context, index) {
          return navScreens[activeScreenIndex];
        },),
-      appBar: AppBar(backgroundColor: Color.fromARGB(128, 0, 150, 135).withOpacity(0.8),
+      appBar: AppBar(backgroundColor: Color.fromARGB(255, 2, 46, 45),
+      title: Text("History Of Islam",style: TextStyle(
+        fontFamily: "GreatVibes",
+        color: Color(0xFFedb97b),
+        fontSize: 28
+      ),),centerTitle: true,
     elevation:0,
     actions: [
       IconButton(onPressed: (){
@@ -148,17 +154,17 @@ class _HomeState extends State<Home> {
     ),
     
 );
-      }, icon: Icon(Icons.person)),
+      }, icon: Icon(FontAwesomeIcons.userLarge),color: Color(0xFFedb97b),),
     ],
     leading: IconButton(onPressed: 
     (){
       ZoomDrawer.of(context)?.toggle();
-    }, icon: Icon(Icons.menu),)
+    }, icon: Icon(FontAwesomeIcons.bars),color: Color(0xFFedb97b),)
       
      ),
      bottomNavigationBar: BottomNavigationBar(
-      selectedItemColor:  Color.fromARGB(255, 1, 97, 87),
-      unselectedItemColor: Colors.white,
+      selectedItemColor:  Color(0xFFedb97b),
+      unselectedItemColor: Color.fromARGB(255, 5, 126, 114),
       onTap: (value) {
         setState(() {
           activeScreenIndex = value;
@@ -167,12 +173,12 @@ class _HomeState extends State<Home> {
       },
       currentIndex: activeScreenIndex,
       items: [
-      BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home",backgroundColor: Colors.teal.shade300),
-      BottomNavigationBarItem(icon: Icon(Icons.book),label: "Books",backgroundColor: Colors.teal.shade300),
-      BottomNavigationBarItem(icon: Icon(Icons.person),label: "Prophet",backgroundColor: Colors.teal.shade300),
-      BottomNavigationBarItem(icon: Icon(Icons.flag_circle),label: "About War",backgroundColor: Colors.teal.shade300),
-      BottomNavigationBarItem(icon: Icon(Icons.bookmark_add),label: "Bookmarks",backgroundColor: Colors.teal.shade300),
-      BottomNavigationBarItem(icon: Icon(Icons.more),label: "More",backgroundColor: Colors.teal.shade300),
+      BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.houseChimney),label: "Home",backgroundColor: Color.fromARGB(255, 2, 46, 45)),
+      BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.book),label: "Books",backgroundColor: Color.fromARGB(255, 2, 46, 45)),
+      BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.userLarge),label: "Prophet",backgroundColor:Color.fromARGB(255, 2, 46, 45)),
+      BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.solidFlag),label: "About War",backgroundColor: Color.fromARGB(255, 2, 46, 45)),
+      BottomNavigationBarItem(icon: Icon(FontAwesomeIcons.bookBookmark),label: "Bookmarks",backgroundColor: Color.fromARGB(255, 2, 46, 45)),
+      BottomNavigationBarItem(icon: Icon(Icons.more),label: "More",backgroundColor: Color.fromARGB(255, 2, 46, 45)),
       
      ]),
       );

@@ -36,16 +36,14 @@ class _NameTextFieldState extends State<NameTextField> {
           cursorColor: Colors.white,
           decoration: InputDecoration(
             border: InputBorder.none,
-            contentPadding: EdgeInsets.only(top: 20),
+            //contentPadding: EdgeInsets.only(top: 10),
             hintText: widget.hint,
             hintStyle: bodytext,
-            prefixIcon: Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: Icon(
+            prefixIcon:  Icon(
                 widget.icon,
               size: 28,color: Colors.white,),
-            )
-          ),
+            ),
+          
           style: bodytext,
           keyboardType:widget.inputType,
           textInputAction: widget.inputAction,

@@ -13,13 +13,18 @@ class _AgeAndSentAreaState extends State<AgeAndSentArea> {
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: AppBar(
-          title: Text("Prophet's Area & Age Duration"),
-          backgroundColor: Colors.teal,
+          title: Text("Prophet's Area & Age Duration",style: TextStyle(
+            color: Color(0xFFedb97b),
+            fontFamily: "bold",
+            fontSize: 25
+          ),),
+          backgroundColor: Color(0xFF043A39),
           centerTitle: true,
         ),
       body: 
       Container(
           child: PhotoView(
+        //Display Image on Screen
       imageProvider: AssetImage("assets/age&sent_area.jpg"),
       ),
         ),

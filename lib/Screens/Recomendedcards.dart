@@ -101,9 +101,9 @@ class RecomendedItems extends StatelessWidget {
          height: 200,
          margin: EdgeInsets.only(left:20,top: 20/2,bottom: 20*2.5 ),
          // color: Colors.teal,
-         decoration: BoxDecoration(  color: Colors.teal.withOpacity(0.5),
+         decoration: BoxDecoration(  color: Color.fromARGB(255, 2, 46, 45).withOpacity(0.8),
          boxShadow: [BoxShadow(
-           color: Colors.teal.withOpacity(0.2),
+           color: Color.fromARGB(255, 2, 46, 45),
            blurRadius: 20,
          )],
          borderRadius: BorderRadius.all(Radius.circular(16),

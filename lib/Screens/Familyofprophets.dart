@@ -14,8 +14,13 @@ class _FamilyOfProphetState extends State<FamilyOfProphet> {
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: AppBar(
-          title: Text("Family Tree of Prophets"),
-          backgroundColor: Colors.teal,
+          title: Text("Family Tree of Prophets",
+          style: TextStyle(
+            color: Color(0xFFedb97b),
+            fontFamily: "bold",
+            fontSize: 25
+          ),),
+          backgroundColor: Color(0xFF043A39),
           centerTitle: true,
         ),
       body: 

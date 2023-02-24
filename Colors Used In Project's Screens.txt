@@ -1,0 +1,25 @@
+				
+			      --- Slided screen ---
+Algerian ---------------------------------------------------- Heading
+Arial-Rounded-MT-Bold --------------------------------------- Subheading
+
+				--- Colors ---
+Color(0xFFedb97b) ------------------------------------------- Heading + Subheading
+Color(0xFF043A39) ------------------------------------------- Background
+                        
+				--- Side Menu ---
+Arial-Rounded-MT-Bold --------------------------------------- Headings
+FontAwsomeIcons --------------------------------------------- Icons
+Color(0xFFedb97b) ------------------------------------------- Heading + Icons
+				--- Home Screen ---
+GreatVibes ---------------------------------------------------- Heading
+Arial-Rounded-MT-Bold ----------------------------------------- SubHeading
+Color(0xFFedb97b) --------------------------------------------- Text + Icons
+Color(0xFF043A39) --------------------------------------------- Background
+Color.fromARGB(255, 5, 126, 114) ------------------------------ Unselected nav bar icons
+Color(0xFFedb97b) --------------------------------------------- Selected Nav bar icons
+     		    --- Prophet+Books+war+moredata+bookmark ---
+Color(0xFF043A39) + Colors.teal --------------------------------------------- Button Background
+Color(0xFFedb97b) ----------------------------------------------------------- Text + Icons
+Colors.white ---------------------------------------------------------------- slider button + Numbers
+

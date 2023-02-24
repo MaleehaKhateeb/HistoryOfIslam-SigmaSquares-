@@ -14,11 +14,13 @@ class _pdfbookState extends State<pdfbook> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.teal,
+        backgroundColor: Color.fromARGB(255, 2, 46, 45),
         title: Text("ArRaheeq_AlMakhtum_THE_SEALED_NECTAR"),
         titleTextStyle: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 20,
+          color: Color(0xFFedb97b),
+          fontFamily: "bold"
         ),
         centerTitle: true,
       ),

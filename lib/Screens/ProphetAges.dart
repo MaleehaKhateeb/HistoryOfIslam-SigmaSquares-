@@ -15,9 +15,11 @@ class _ProphetAgesState extends State<ProphetAges> {
     return Scaffold(
       appBar: AppBar(
           title: Text("Prophet's Ages",style: TextStyle(
-             fontFamily: "button",
+             fontFamily: "bold",
+             color: Color(0xFFedb97b),
+             fontSize: 25
           ),),
-          backgroundColor: Colors.teal,
+          backgroundColor: Color.fromARGB(255, 2, 46, 45),
           centerTitle: true,
         ),
       body: PhotoView(

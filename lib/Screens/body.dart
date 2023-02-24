@@ -1,74 +1,230 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:islamic_app/Book.dart';
+import 'package:islamic_app/Screens/ProphetAges.dart';
+import 'package:islamic_app/Screens/calendar.dart';
+import 'package:islamic_app/Screens/chart.dart';
 
-import 'Recomendedcards.dart';
-import 'Titlewithmorebtn.dart';
-import 'header_with_searchbox.dart';
-class body extends StatefulWidget {
-  const body({Key? key}) : super(key: key);
-
-  @override
-  State<body> createState() => _bodyState();
-}
-
-class _bodyState extends State<body> {
+import 'package:islamic_app/Screens/timeline.dart';
+import 'package:islamic_app/Widgets/BackgroundImage.dart';
+import 'package:intl/intl.dart';
+class body extends StatelessWidget {
+  const body({ Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-      Size size = MediaQuery.of(context).size;
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Headerwithsearchbox(size: size),
-           Positioned(bottom: 10,
-          left: 0,
-          right: 0,
-            child: Container(
-              alignment: Alignment.center,
-            margin: EdgeInsets.symmetric(horizontal: 15.0, vertical: 4),
-            padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 4),
-            height: 54,
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
-              boxShadow: [
-                BoxShadow(
-                  // offset: Offset(0, 10),
-                  blurRadius: 50,
-                  color:Colors.tealAccent.withOpacity(0.5),
-                )
-              ],
-              
-              border: Border.all(
-                color: Colors.teal,
-              )
+    Size size = MediaQuery.of(context).size;
+    return Stack(
+    children: [
+      //Background Image 
+      BackgroundImage(image: "assets/main.png",
+      ),
+      Scaffold(
+        backgroundColor: Colors.transparent,
+        body: Center(
+          child: Column(
+            children: [
+              SizedBox(height: 230,),
+             Row(
+                children: [
+                  Padding(padding: EdgeInsets.only(left:100)),
+                    Text(
+                //DateFormat("yyyy-mm-dd").format(DateTime.now());
+                //Display date format Hours:Minutes of exact time
+               DateFormat('kk:mm').format(DateTime.now()),
+                style: TextStyle(
+                  fontSize: 70,
+                  color: Color(0xFFedb97b),),
               ),
-              child:TextField(
-                onChanged: (value)  {},
-                decoration: InputDecoration(
-                  hintText:"Search",
-                  hintStyle: TextStyle(
-                    color: Colors.teal.withOpacity(0.5),
-                  ),
-                  enabledBorder: InputBorder.none,
-                  focusedBorder: InputBorder.none,
-                  suffixIcon: Icon(Icons.search, color: Colors.teal.withOpacity(0.5),)
+              Padding(padding: EdgeInsets.all(8)),
+              Text(
+                //DateFormat("yyyy-mm-dd").format(DateTime.now());
+               DateFormat('a').format(DateTime.now()),
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Color(0xFFedb97b),),
+              ),
+                ],
+              ),
+              Center(
+                child: Row(
+                  children: [
+                    Padding(padding: EdgeInsets.only(left: 100)),
+                       Text(
+                        //Display the Day
+                          DateFormat("EEEE,").format(DateTime.now()),
+                          style: TextStyle(
+                            fontSize: 30,
+                            color: Color.fromARGB(255, 222, 168, 102),),
+                ),
+                //Display the date and month
+                Text(
+                  DateFormat("dd LLL").format(DateTime.now()),
+                  style: TextStyle(
+                    fontSize: 28,
+                    color: Color(0xFFedb97b),),
+                ),
+                  ],
                 ),
               ),
-              )
-            ),
-             Titlewithmorebtn(
-              title: "Recomended",
-              press: (){},
-             ),
-             Recomendedcards(),
-      ])
+              SizedBox(height:20,),
+              Container(
+                height: 310,
+                width: 290,
+                padding: EdgeInsets.only(top: 15),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.only(top: 10)
+                      ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        InkWell(
+                          onTap: (() {
+                            Navigator.push(
+                              context, 
+                              MaterialPageRoute(builder: (context)=> timeline()));
+                          }),
+                          child: Container(
+                            height: 100,
+                            width: 140,
+                            color: Color.fromARGB(255, 2, 46, 45),
+                            child: Column(
+                              children: [
 
-              );
-           
-             
-      
-        
-        
-        
+                                Padding(
+                                  padding: EdgeInsets.only(top: 10)
+                                  ),
+
+                                Icon(FontAwesomeIcons.timeline,
+                                color: Color(0xFFedb97b),
+                                size: 45,),
+
+                             SizedBox(height: 10,),
+
+                                Text("Timeline of Prophet",style: TextStyle(
+                                  color: Color(0xFFedb97b),
+                                  fontSize: 15
+
+                                ),),
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: (){
+                            
+                               Navigator.push(
+                              context, MaterialPageRoute(builder: (context)=> Chart()));
+                          },
+                          child: Container(
+                            height: 100,
+                            width: 140,
+                            color: Color.fromARGB(255, 2, 46, 45),
+                            child: Column(
+                              children: [
+
+                                Padding(
+                                  padding: EdgeInsets.only(top: 10)
+                                  ),
+
+                                Icon(FontAwesomeIcons.userGroup,
+                                color: Color(0xFFedb97b),
+                                size: 45,),
+
+                                SizedBox(height: 10,),
+
+                                Text(
+                                  "Prophet Ages",
+                                  style: TextStyle(
+                                  color: Color(0xFFedb97b),
+                                  fontSize: 15
+                                ),),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        InkWell(
+                          onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> pdfbook()));
+                          },
+                          child: Container(
+                            height: 100,
+                            width: 140,
+                            color: Color.fromARGB(255, 2, 46, 45),
+                            child: Column(
+                              children: [
+
+                                Padding(
+                                  padding: EdgeInsets.only(top: 10)),
+
+                                Icon(
+                                  FontAwesomeIcons.bookJournalWhills,
+                                color: Color(0xFFedb97b),
+                                size: 45,),
+
+                                SizedBox(height: 10,),
+
+                                Text(
+                                  "The Sealed Nectar",
+                                  style: TextStyle(
+                                  color: Color(0xFFedb97b),
+                                  fontSize: 15
+                                ),),
+                              ],
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          onTap: (){
+                            Navigator.push(context,
+                             MaterialPageRoute(builder: 
+                             (context)=> calendar()));
+          
+                          },
+                          child: Container(
+                            height: 100,
+                            width: 140,
+                            color: Color.fromARGB(255, 2, 46, 45),
+                            child: Column(
+                              children: [
+
+                                Padding(
+                                  padding: EdgeInsets.only(top: 10)),
+
+                                Icon(
+                                  FontAwesomeIcons.calendar,
+                                color: Color(0xFFedb97b),
+                                size: 45,),
+
+                                SizedBox(height: 10,),
+
+                                Text(
+                                  "Calender",
+                                  style: TextStyle(
+                                  color: Color(0xFFedb97b),
+                                  fontSize: 15
+                                ),),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      )
+    ],
+    );
   }
 }
-

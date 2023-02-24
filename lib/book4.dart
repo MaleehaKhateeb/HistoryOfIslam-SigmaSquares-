@@ -12,11 +12,12 @@ class _book4State extends State<book4> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.teal,
+        backgroundColor: Color.fromARGB(255, 2, 46, 45),
         title: Text("History Of Islam 1"),
         titleTextStyle: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 20,
+          fontFamily: "bold"
         ),
         centerTitle: true,
       ),

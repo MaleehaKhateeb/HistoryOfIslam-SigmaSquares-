@@ -15,13 +15,12 @@ class _moredataState extends State<moredata> {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 6, 159, 144),
+        backgroundColor: Color(0xFF043A39),
         title: Text(" Ghazwaat",
         style: TextStyle(
-           fontFamily: "button",
-          fontSize: 20,
-          fontStyle: FontStyle.italic,
-          color: Colors.white,
+           fontFamily: "bold",
+          fontSize: 25,
+          color: Color(0xFFedb97b),
         ),),
         centerTitle: true,
       ),
@@ -39,8 +38,8 @@ class _moredataState extends State<moredata> {
                           height: 150,
                           width: 100,
                           decoration: BoxDecoration(
-                            gradient: LinearGradient(colors: [Colors.teal , Colors.tealAccent]),
-                            image: DecorationImage(image: AssetImage("assets/Sword.png")),
+                            gradient: LinearGradient(colors: [Colors.teal , Color(0xFF043A39)]),
+                            image: DecorationImage(image: AssetImage("assets/sword.png")),
                             borderRadius: BorderRadius.circular(10),
                           ),
                         ),
@@ -58,7 +57,6 @@ class _moredataState extends State<moredata> {
                               child: Text("Gazwa-e-Badar",style: TextStyle(
                                  fontFamily: "font2",
                                 fontSize: 20,
-                                fontStyle: FontStyle.italic,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black,
                               ),),
@@ -72,12 +70,13 @@ class _moredataState extends State<moredata> {
                             height: 70,
                             child: SlideAction(
                             innerColor: Colors.white,
-                            outerColor: Color.fromARGB(255, 4, 177, 159),
+                            outerColor: Color(0xFF043A39),
                             sliderButtonIcon: Icon(Icons.read_more),
                             text: "Slide To Read",
                             textStyle: const TextStyle(
                                fontFamily: "button",
-                              fontSize: 20
+                              fontSize: 20,
+                              color: Color(0xFFedb97b)
                             ),
                             onSubmit: () async {
                              await 
@@ -109,8 +108,8 @@ class _moredataState extends State<moredata> {
                       height: 150,
                       width: 100,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.teal , Colors.tealAccent]),
-                        image: DecorationImage(image: AssetImage("assets/Sword.png")),
+                        gradient: LinearGradient(colors: [Colors.teal , Color(0xFF043A39)]),
+                        image: DecorationImage(image: AssetImage("assets/sword.png")),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
@@ -128,7 +127,6 @@ class _moredataState extends State<moredata> {
                           child: Text("Gazwa-e-Uhad",style: TextStyle(
                              fontFamily: "font2",
                             fontSize: 20,
-                            fontStyle: FontStyle.italic,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),),
@@ -142,12 +140,13 @@ class _moredataState extends State<moredata> {
                         height: 70,
                         child: SlideAction(
                         innerColor: Colors.white,
-                        outerColor: Color.fromARGB(255, 4, 177, 159),
+                        outerColor: Color(0xFF043A39),
                         sliderButtonIcon: Icon(Icons.read_more),
                         text: "Slide To Read",
                         textStyle: TextStyle(
                            fontFamily: "button",
-                          fontSize: 20
+                          fontSize: 20,
+                          color: Color(0xFFedb97b)
                         ),
                         onSubmit: () {
                           
@@ -176,8 +175,8 @@ class _moredataState extends State<moredata> {
                       height: 150,
                       width: 100,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.teal , Colors.tealAccent]),
-                        image: DecorationImage(image: AssetImage("assets/Sword.png")),
+                        gradient: LinearGradient(colors: [Colors.teal , Color(0xFF043A39)]),
+                        image: DecorationImage(image: AssetImage("assets/sword.png")),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
@@ -195,7 +194,6 @@ class _moredataState extends State<moredata> {
                           child: Text("Gazwa-e-Ahzaab",style: TextStyle(
                              fontFamily: "font2",
                             fontSize: 20,
-                            fontStyle: FontStyle.italic,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),),
@@ -209,12 +207,13 @@ class _moredataState extends State<moredata> {
                         height: 70,
                         child: SlideAction(
                         innerColor: Colors.white,
-                        outerColor: Color.fromARGB(255, 4, 177, 159),
+                        outerColor: Color(0xFF043A39),
                         sliderButtonIcon: Icon(Icons.read_more),
                         text: "Slide To Read",
                         textStyle: TextStyle(
                            fontFamily: "button",
-                          fontSize: 20
+                          fontSize: 20,
+                          color: Color(0xFFedb97b)
                         ),
                         onSubmit: () {
                          Navigator.push(context, MaterialPageRoute(builder: (context)=> Gazwat()));
@@ -242,8 +241,8 @@ class _moredataState extends State<moredata> {
                       height: 150,
                       width: 100,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.teal , Colors.tealAccent]),
-                        image: DecorationImage(image: AssetImage("assets/Sword.png")),
+                        gradient: LinearGradient(colors: [Colors.teal , Color(0xFF043A39)]),
+                        image: DecorationImage(image: AssetImage("assets/sword.png")),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
@@ -261,7 +260,6 @@ class _moredataState extends State<moredata> {
                           child: Text("Gazwa-e-Khandak",style: TextStyle(
                              fontFamily: "font2",
                             fontSize: 20,
-                            fontStyle: FontStyle.italic,
                             fontWeight: FontWeight.bold,
                             color: Colors.black,
                           ),),
@@ -275,12 +273,13 @@ class _moredataState extends State<moredata> {
                         height: 70,
                         child: SlideAction(
                         innerColor: Colors.white,
-                        outerColor: Color.fromARGB(255, 4, 177, 159),
+                        outerColor: Color(0xFF043A39),
                         sliderButtonIcon: Icon(Icons.read_more),
                         text: "Slide To Read",
                         textStyle: TextStyle(
                           fontSize: 20,
                            fontFamily: "button",
+                           color: Color(0xFFedb97b)
                         ),
                         onSubmit: () {
                          Navigator.push(context, MaterialPageRoute(builder: (context)=> Gazwat()));

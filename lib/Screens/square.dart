@@ -26,7 +26,7 @@ class _MySquareState extends State<MySquare> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(Radius.circular(10)),
               gradient: LinearGradient(colors: [
-                Colors.teal, Colors.tealAccent
+                Colors.teal, Color(0xFF043A39)
               ],
               end: Alignment.topCenter,
               begin: Alignment.bottomCenter,
@@ -41,9 +41,8 @@ class _MySquareState extends State<MySquare> {
                    style: TextStyle(
                       fontSize: 20,
                       fontFamily: "font2",
-                      fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold,
-                      color: Color.fromARGB(255, 1, 97, 87),
+                      color: Color(0xFFedb97b),
                      ),),
                 ),
                    
@@ -52,7 +51,8 @@ class _MySquareState extends State<MySquare> {
                   children: [
                     Container(
                       margin: EdgeInsets.only(right: 10),
-                      child:Icon(Icons.arrow_forward_ios,size: 17,)
+                      child:Icon(Icons.arrow_forward_ios,size: 17,
+                      color: Color(0xFFedb97b),)
                     ),
                   ],
                 ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:islamic_app/Bookmain.dart';
 import 'package:islamic_app/Screens/Home.dart';
 import 'package:islamic_app/Screens/bookmark.dart';
@@ -27,8 +28,8 @@ class MenuState extends State<Menu> {
             borderRadius: BorderRadius.only(topRight: Radius.circular(30),
             bottomRight: Radius.circular(30)),
             gradient: LinearGradient(colors: [
-              Colors.teal,
-              Colors.tealAccent,
+              Color(0xFF043A39),
+              Color.fromARGB(255, 11, 120, 118),
             ],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
@@ -49,18 +50,18 @@ class MenuState extends State<Menu> {
                child: Row(
                 children: [
                   Expanded(child: Icon(
-                    Icons.home_filled,
+                    FontAwesomeIcons.houseChimneyUser,
                     size: 20,
-                    color:Color.fromARGB(255, 1, 97, 87),
+                    color:Color(0xFFedb97b),
                   )),
                   Expanded(
                     flex: 3,
                     child:
                      Text("Home",
                      style: TextStyle(
-                       fontFamily: "font1",
+                       fontFamily: "bold",
                       fontSize: 20,
-                      color:Color.fromARGB(255, 1, 97, 87),
+                      color:Color(0xFFedb97b),
                        
                      ),),
                     
@@ -88,9 +89,9 @@ class MenuState extends State<Menu> {
                child: Row(
                 children: [
                   Expanded(child: Icon(
-                    Icons.book,
+                    FontAwesomeIcons.book,
                     size: 20,
-                    color: Color.fromARGB(255, 1, 97, 87),
+                    color: Color(0xFFedb97b),
                   )),
                   Expanded(
                     flex: 3,
@@ -98,8 +99,8 @@ class MenuState extends State<Menu> {
                      Text("Book",
                      style: TextStyle(
                       fontSize: 20,
-                       fontFamily: "font1",
-                      color:Color.fromARGB(255, 1, 97, 87),
+                       fontFamily: "bold",
+                      color:Color(0xFFedb97b),
                      ),))
                 ],
                ),),
@@ -119,18 +120,18 @@ class MenuState extends State<Menu> {
                child: Row(
                 children: [
                   Expanded(child: Icon(
-                    Icons.person,
+                    FontAwesomeIcons.userLarge,
                     size: 20,
-                    color: Color.fromARGB(255, 1, 97, 87),
+                    color: Color(0xFFedb97b),
                   )),
                   Expanded(
                     flex: 3,
                     child:
                      Text("Prophet",
                      style: TextStyle(
-                       fontFamily: "font1",
+                       fontFamily: "bold",
                       fontSize: 20,
-                      color: Color.fromARGB(255, 1, 97, 87),
+                      color: Color(0xFFedb97b),
                      ),))
                 ],
                ),),
@@ -150,18 +151,18 @@ class MenuState extends State<Menu> {
                child: Row(
                 children: [
                   Expanded(child: Icon(
-                    Icons.flag_circle_sharp,
+                    FontAwesomeIcons.solidFlag,
                     size: 20,
-                    color: Color.fromARGB(255, 1, 97, 87),
+                    color: Color(0xFFedb97b),
                   )),
                   Expanded(
                     flex: 3,
                     child:
                      Text("Ghazwaat",
                      style: TextStyle(
-                       fontFamily: "font1",
+                       fontFamily: "bold",
                       fontSize: 20,
-                      color: Color.fromARGB(255, 1, 97, 87),
+                      color: Color(0xFFedb97b),
                      ),))
                 ],
                ),),
@@ -181,18 +182,18 @@ class MenuState extends State<Menu> {
                child: Row(
                 children: [
                   Expanded(child: Icon(
-                    Icons.bookmark_add,
+                    FontAwesomeIcons.bookBookmark,
                     size: 20,
-                    color:Color.fromARGB(255, 1, 97, 87),
+                    color:Color(0xFFedb97b),
                   )),
                   Expanded(
                     flex: 3,
                     child:
                      Text("Bookmark",
                      style: TextStyle(
-                       fontFamily: "font1",
+                       fontFamily: "bold",
                       fontSize: 20,
-                      color: Color.fromARGB(255, 1, 97, 87),
+                      color: Color(0xFFedb97b),
                      ),))
                 ],
                ),),
@@ -214,16 +215,16 @@ class MenuState extends State<Menu> {
                   Expanded(child: Icon(
                     Icons.more,
                     size: 20,
-                    color: Color.fromARGB(255, 1, 97, 87),
+                    color: Color(0xFFedb97b),
                   )),
                   Expanded(
                     flex: 3,
                     child:
                      Text("More",
                      style: TextStyle(
-                       fontFamily: "font1",
+                       fontFamily: "bold",
                       fontSize: 20,
-                      color: Color.fromARGB(255, 1, 97, 87),
+                      color: Color(0xFFedb97b),
                      ),))
                 ],
                ),),
@@ -245,18 +246,18 @@ class MenuState extends State<Menu> {
                child: Row(
                 children: [
                   Expanded(child: Icon(
-                    Icons.logout_outlined,
+                    FontAwesomeIcons.signOutAlt,
                     size: 20,
-                    color:Color.fromARGB(255, 1, 97, 87),
+                    color:Color(0xFFedb97b),
                   )),
                   Expanded(
                     flex: 3,
                     child:
                      Text("LogOut",
                      style: TextStyle(
-                       fontFamily: "font1",
+                       fontFamily: "bold",
                       fontSize: 20,
-                      color: Color.fromARGB(255, 1, 97, 87),
+                      color: Color(0xFFedb97b),
                      ),))
                 ],
                ),),

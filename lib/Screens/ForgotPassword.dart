@@ -94,7 +94,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
       // decoration: BoxDecoration(borderRadius:BorderRadius.circular(16),
       // ),
       
-       Buttons(buttontext: "verify", onTap: () {
+       Buttons(buttontext: "Verify", onTap: () {
          Navigator.push(
                  context,
                 MaterialPageRoute(builder: (context) => const emailcheck()),);

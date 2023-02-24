@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 const TextStyle bodytext = TextStyle(
   fontSize: 24,
+  fontFamily: "Lato",
   fontWeight: FontWeight.bold,
 color: Colors.white,
 height: 1.5);

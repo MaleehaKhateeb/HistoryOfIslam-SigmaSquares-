@@ -12,15 +12,16 @@ class _prophetdetailsState extends State<prophetdetails> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Detail",style: TextStyle(
-           fontFamily: "button",
+           fontFamily: "bold",
+           color: Color(0xFFedb97b)
         ),),
         centerTitle: true,
-        backgroundColor: Colors.teal,
+        backgroundColor: Color.fromARGB(255, 2, 46, 45),
       ),
       body:Center(
         child: Text("Comming Soon.......",style: TextStyle(
           fontSize: 30,
-          color: Colors.teal,
+          color: Color.fromARGB(255, 2, 46, 45),
         ),),
         
         ),

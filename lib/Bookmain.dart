@@ -19,13 +19,13 @@ class _MainBooksState extends State<MainBooks> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 6, 159, 144),
+        backgroundColor: Color.fromARGB(255, 2, 46, 45),
         title: Text("Islamic Books",
         style: TextStyle(
-          fontFamily: "button",
-          fontSize: 20,
+          fontFamily: "bold",
+          fontSize: 25,
           fontStyle: FontStyle.italic,
-          color: Colors.white,
+          color: Color(0xFFedb97b),
         ),),
         centerTitle: true,
       ),

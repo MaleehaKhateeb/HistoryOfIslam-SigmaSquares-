@@ -13,18 +13,22 @@ class _bookmarkState extends State<bookmark> {
   
     return Scaffold(
       appBar: AppBar(
-        title: Text("Bookmarks",style: TextStyle(
-          fontFamily: "button",
-          fontSize: 20
+        title: Text(
+          "Bookmarks",
+          style: TextStyle(
+          fontFamily: "bold",
+          fontSize: 25,
+          color: Color(0xFFedb97b)
         ),),
-        backgroundColor: Colors.teal,
+        backgroundColor: Color(0xFF043A39),
         centerTitle: true,
       ),
       body: Center(
         child: Text(
-          "Comming soon" , style: TextStyle(
+          "Comming soon" ,
+           style: TextStyle(
             fontSize: 30,
-            color: Colors.teal,
+            color: Color(0xFF043A39),
             fontWeight: FontWeight.bold,
             fontStyle: FontStyle.italic,
           ),
