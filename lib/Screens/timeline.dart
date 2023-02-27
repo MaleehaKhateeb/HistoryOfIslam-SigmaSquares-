@@ -15,6 +15,7 @@ class _timelineState extends State<timeline> {
       appBar: AppBar(
           title: Text("Timeline of the Prophet Muhammad SA",
              style: TextStyle(
+              color: Color(0xFFedb97b),
              fontFamily: "bold",
           ),),
           backgroundColor:Color.fromARGB(255, 2, 46, 45),

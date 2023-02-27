@@ -27,6 +27,7 @@ child: ListView.builder(
   itemCount: PROFETSDATA.length,
   itemBuilder:(context, index) {
   return ListTile(
+    //List of prophet's names
     title: Text(
       PROFETSDATA[index]['prophet_name'].toString(),
             style: const TextStyle(
@@ -35,6 +36,7 @@ child: ListView.builder(
     trailing: const Icon(
             Icons.arrow_forward_ios_rounded),
     onTap: (){
+      // Move to prophet details screen, fetch the data and show it 
       Navigator.push(
         context, 
         MaterialPageRoute(

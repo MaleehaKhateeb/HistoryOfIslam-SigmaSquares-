@@ -1,21 +1,27 @@
+//                    Main / Home_screen
+//These are some packages which we use to make this screen 
+import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:islamic_app/Book.dart';
+import 'package:islamic_app/Screens/Barchart.dart';
 import 'package:islamic_app/Screens/ProphetAges.dart';
 import 'package:islamic_app/Screens/calendar.dart';
 import 'package:islamic_app/Screens/chart.dart';
-
 import 'package:islamic_app/Screens/timeline.dart';
 import 'package:islamic_app/Widgets/BackgroundImage.dart';
 import 'package:intl/intl.dart';
+// Use Stateless Widget to build this screen 
+// Because their will be no change in this screen
 class body extends StatelessWidget {
   const body({ Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+// To get Size of the screen 
     Size size = MediaQuery.of(context).size;
-    return Stack(
+    return Stack( // Use stack Because making layers in screen
     children: [
-      //Background Image 
+      //Background Image of screen
       BackgroundImage(image: "assets/main.png",
       ),
       Scaffold(
@@ -29,9 +35,9 @@ class body extends StatelessWidget {
                   Padding(padding: EdgeInsets.only(left:100)),
                     Text(
                 //DateFormat("yyyy-mm-dd").format(DateTime.now());
-                //Display date format Hours:Minutes of exact time
+          //Display date format Hours:Minutes of exact time
                DateFormat('kk:mm').format(DateTime.now()),
-                style: TextStyle(
+                style: TextStyle( // Some text styling using Textstyle class 
                   fontSize: 70,
                   color: Color(0xFFedb97b),),
               ),
@@ -50,11 +56,11 @@ class body extends StatelessWidget {
                   children: [
                     Padding(padding: EdgeInsets.only(left: 100)),
                        Text(
-                        //Display the Day
+                //Display the Day
                           DateFormat("EEEE,").format(DateTime.now()),
                           style: TextStyle(
                             fontSize: 30,
-                            color: Color.fromARGB(255, 222, 168, 102),),
+                            color: Color(0xFFedb97b),),
                 ),
                 //Display the date and month
                 Text(
@@ -67,6 +73,8 @@ class body extends StatelessWidget {
                 ),
               ),
               SizedBox(height:20,),
+              // Making buttons On Home Screen like : 
+              //                         Book , Calender , Pictorial rep etc
               Container(
                 height: 310,
                 width: 290,
@@ -80,31 +88,38 @@ class body extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
+                        //Use Inkwell to container clickable
                         InkWell(
                           onTap: (() {
+                            //Move to the timeline screen
                             Navigator.push(
                               context, 
                               MaterialPageRoute(builder: (context)=> timeline()));
                           }),
                           child: Container(
+                            //height of container
                             height: 100,
+                            //width of container
                             width: 140,
+                            //Color of container
                             color: Color.fromARGB(255, 2, 46, 45),
                             child: Column(
+                              //Use column to display data vertically
                               children: [
-
+                              //padding use for spacing the specific area
                                 Padding(
                                   padding: EdgeInsets.only(top: 10)
                                   ),
-
+                              //Use Icon for User information
                                 Icon(FontAwesomeIcons.timeline,
                                 color: Color(0xFFedb97b),
                                 size: 45,),
 
                              SizedBox(height: 10,),
-
+                                //Text under the icon
                                 Text("Timeline of Prophet",style: TextStyle(
                                   color: Color(0xFFedb97b),
+                                  //Size of text
                                   fontSize: 15
 
                                 ),),
@@ -114,7 +129,7 @@ class body extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: (){
-                            
+                            //Move to chart screen
                                Navigator.push(
                               context, MaterialPageRoute(builder: (context)=> Chart()));
                           },
@@ -152,6 +167,7 @@ class body extends StatelessWidget {
                       children: [
                         InkWell(
                           onTap: () {
+                            //move to english history book
                             Navigator.push(context, MaterialPageRoute(builder: (context)=> pdfbook()));
                           },
                           child: Container(
@@ -168,7 +184,7 @@ class body extends StatelessWidget {
                                   FontAwesomeIcons.bookJournalWhills,
                                 color: Color(0xFFedb97b),
                                 size: 45,),
-
+                              //For spacing between widgets 
                                 SizedBox(height: 10,),
 
                                 Text(
@@ -183,6 +199,7 @@ class body extends StatelessWidget {
                         ),
                         InkWell(
                           onTap: (){
+                            //move to calender screen
                             Navigator.push(context,
                              MaterialPageRoute(builder: 
                              (context)=> calendar()));

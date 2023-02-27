@@ -1,4 +1,4 @@
-
+//Widget of Button using in app
 
 import 'dart:convert';
 
@@ -15,34 +15,6 @@ import 'package:islamic_app/services/users_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Button.dart';
-// class topicbutton extends StatefulWidget {
-//    final String screen;
-//   final String onTap;
-//   const topicbutton({Key? key, required this.screen,
-//   required this.onTap}) : super(key: key);
-
-//   @override
-//   State<topicbutton> createState() => _topicbuttonState();
-// }
-// class _topicbuttonState extends State<topicbutton> {
-//   @override
-//   Widget build(BuildContext context) {
-//      Size size = MediaQuery.of(context).size;
-//     return Container(
-//        height: size.height*0.26,
-//       width: size.width*0.46,
-//       decoration: BoxDecoration(borderRadius:BorderRadius.circular(16),
-//       color: Colors.teal,
-      
-      
-//       ),
-//       child: Buttons(buttontext: widget.screen, onTap: ()=>
-//         Navigator.pushNamed(context, widget.onTap)
-//   )
-//     );
-//   }
-// }
-
 class RoundedButton extends StatefulWidget {
   const RoundedButton({
     Key? key,
@@ -66,6 +38,8 @@ class _RoundedButtonState extends State<RoundedButton> {
           buttontext: "Login", 
           onTap: ()async{
           //var shared_pr = await SharedPreferences.getInstance();
+          //when user click on ogin button 
+          //then chk user data is in UserModel 
            List<UserModel?> allusers = await UserStorage.getAllUsersData();
             print(allusers);
             bool loginSuccess = false;
@@ -91,6 +65,7 @@ class _RoundedButtonState extends State<RoundedButton> {
               &&
               element?.password == pwd_controller.text.toString()) {
                 loginSuccess = true;
+                //Then set data according to the user model
                 UserStorage.setUserData(element!);
                 //break;
                 //shared_pr.setBool(SlidedScreensState.Loginkey, true);

@@ -1,3 +1,4 @@
+//All data of prophets in dart file 
 var PROFETSDATA = [
     {
         "id" : "1",

@@ -1,3 +1,4 @@
+//Widget of textfield of Password
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -9,6 +10,7 @@ final pwd_controller = TextEditingController();
 class passwordInput extends StatefulWidget {
   const passwordInput({
     Key? key,
+    //Items required
     required this.icon,
     required this.hint, 
     required this.inputType,
@@ -42,7 +44,7 @@ class _passwordInputState extends State<passwordInput> {
         child: TextField(
           controller: widget.cont,
           cursorColor: Colors.white,
-          obscureText: _isObscure,
+          obscureText: _isObscure,// show the password / hide the password
           decoration: InputDecoration(
             suffixIcon: IconButton(
                 icon: Padding(

@@ -1,92 +1,16 @@
+// Cards For Representing books
 import 'package:flutter/material.dart';
 import 'package:islamic_app/Book.dart';
-class Recomendedcards extends StatelessWidget {
-  const Recomendedcards({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-     scrollDirection: Axis.horizontal,
-        child: Row(
-          children: [
-            RecomendedItems(
-             image: "assets/Kitab.png",
-             press: (){
-        Navigator.pushNamed(context, '/Pdfbook');
-             },
-             Author: "Author Name",
-             name: "Book Name No 1",
-             heig: 100,
-             wid: 70,
-            ),
-            RecomendedItems(
-             image: "assets/Ant.png",
-             press: (){
-               Navigator.push(
-          context, MaterialPageRoute(builder: (context) => pdfbook()));
-             },
-             Author: "Author Name",
-             name: "Book Name No 2",
-             heig: 100,
-             wid: 70,
-            ),
-            RecomendedItems(
-             image: "assets/Bookmark.jpg",
-             press: (){
-               Navigator.push(
-          context, MaterialPageRoute(builder: (context) => pdfbook()));
-             },
-             Author: "Author Name",
-             name: "Book Name No 3",
-             heig: 100,
-             wid: 70,
-            ),
-            RecomendedItems(
-             image: "assets/Sheep.png",
-             press: (){
-               Navigator.push(
-          context, MaterialPageRoute(builder: (context) => pdfbook()));
-             },
-             Author: "Author Name",
-             name: "Book Name No 4",
-             heig: 100,
-             wid: 70,
-            ),
-            RecomendedItems(
-             image: "assets/Sword.png",
-             press: (){
-              Navigator.push(
-          context, MaterialPageRoute(builder: (context) => pdfbook()));
-      },
-             
-             Author: "Author Name",
-             name: "Book Name No 5",
-             heig: 100,
-             wid: 70,
-            ),
-            RecomendedItems(
-             image: "assets/Logo.png",
-             press: (){  
-              Navigator.push(
-          context, MaterialPageRoute(builder: (context) => pdfbook()));},
-             Author: "Author Name",
-             name: "Book Name No 6",
-             heig: 100,
-             wid: 70,
-            ),
-          ],
-        ),
-      
-    );
-  }
-}
-
 class RecomendedItems extends StatelessWidget {
   const RecomendedItems({
-    Key? key, required this.name,required this.image, required this.Author, required this.press,
-    required this.heig , required this.wid,
+    //required data for this class
+    Key? key, 
+    required this.name,
+    required this.image, 
+    required this.Author, 
+    required this.press,
+    required this.heig ,
+    required this.wid,
   }) : super(key: key);
 
  final String name, image;
@@ -95,6 +19,7 @@ class RecomendedItems extends StatelessWidget {
  final double heig, wid ;
   @override
   Widget build(BuildContext context) {
+    //get the size of screen
     Size size = MediaQuery.of(context).size;
     return 
         Container(
@@ -119,6 +44,7 @@ class RecomendedItems extends StatelessWidget {
            children: [
              Image(
               alignment: Alignment.center,
+              //Get Image
               image: AssetImage(image),
               height: heig ,
               width: wid,
@@ -150,6 +76,7 @@ class RecomendedItems extends StatelessWidget {
                  ),
                  child: Column(
                    children: [
+                    //Name of book
                      Text("$name",
                     overflow: TextOverflow.ellipsis,
                    style: TextStyle(
@@ -157,6 +84,7 @@ class RecomendedItems extends StatelessWidget {
                    ),
                    ),
                 Spacer(),
+                //Name of author
                  Text("$Author" ,
                  textAlign: TextAlign.left,
                  overflow: TextOverflow.ellipsis,

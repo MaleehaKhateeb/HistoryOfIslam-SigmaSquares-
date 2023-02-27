@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 class Constants{
   static Color primaryColor = Colors.amber;
 
-  // screen ki height width double mn hoti ha ok
-// to function bnaty hn getHeight and GetWidth ka
+// Screen height width must be in double
+// so functions are getheight and getwidth
 
-// return type double, static ka pata ha kya krta ha? 
-//?? btaen na
 static double getHeight(BuildContext context){
   return MediaQuery.of(context).size.height;
 }

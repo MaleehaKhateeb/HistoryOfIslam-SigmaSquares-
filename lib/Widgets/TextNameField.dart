@@ -1,3 +1,4 @@
+//Widget of textfield of name
 import 'package:flutter/material.dart';
 import 'package:islamic_app/Widgets/Colors.dart';
 final name_controller = TextEditingController();
@@ -5,6 +6,7 @@ final name_controller = TextEditingController();
 class NameTextField extends StatefulWidget {
   const NameTextField({
     Key? key, 
+    //Items required
     required this.icon,
     required this.hint, 
     required this.inputType,

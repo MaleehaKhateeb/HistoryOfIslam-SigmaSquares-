@@ -1,3 +1,4 @@
+//Widget of textfield of email
 import 'package:flutter/material.dart';
 import 'package:islamic_app/Screens/CreateNewAccount.dart';
 import 'package:islamic_app/Widgets/Colors.dart';
@@ -8,6 +9,7 @@ final email_controller = TextEditingController();
 class TextInputField extends StatefulWidget {
   const TextInputField({
     Key? key, 
+    //Items required
     required this.icon,
     required this.hint, 
     required this.inputType,
@@ -44,7 +46,7 @@ class _TextInputFieldState extends State<TextInputField> {
           cursorColor: Colors.white,
           decoration: InputDecoration(
             border: InputBorder.none,
-            contentPadding: EdgeInsets.only(top: 20),
+            contentPadding: EdgeInsets.only(top: 10),
             hintText: widget.hint,
             hintStyle: bodytext,
             prefixIcon: Padding(

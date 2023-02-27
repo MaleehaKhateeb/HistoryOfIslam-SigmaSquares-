@@ -51,7 +51,7 @@ class _picdataState extends State<picdata> {
                       child: Center(
                         child: Text("1",
                          style: TextStyle(
-                          color: Colors.white,
+                          color: Color(0xFFedb97b),
                           fontSize: 70,
                           fontWeight: FontWeight.bold,
                         ),),
@@ -100,11 +100,12 @@ class _picdataState extends State<picdata> {
                     textStyle: TextStyle(
                        fontFamily: "button",
                        color: Color(0xFFedb97b),
+                       fontWeight: FontWeight.bold,
                       fontSize: 20
                     ),
                     onSubmit: () {
                      Navigator.push(context,
-                    MaterialPageRoute(builder: (context)=> ProphetAges()));
+                    MaterialPageRoute(builder: (context)=> LifeOfMohammadSA()));
                     },
                     ),
                     
@@ -140,7 +141,7 @@ class _picdataState extends State<picdata> {
                   ),
                    child: Center(
                         child: Text("2", style: TextStyle(
-                          color: Colors.white,
+                          color: Color(0xFFedb97b),
                           fontSize: 70,
                           fontWeight: FontWeight.bold,
                         ),),
@@ -185,6 +186,7 @@ class _picdataState extends State<picdata> {
                     textStyle: TextStyle(
                        fontFamily: "button",
                       fontSize: 20,
+                      fontWeight: FontWeight.bold,
                       color: Color(0xFFedb97b)
                     ),
                     onSubmit: () {
@@ -224,7 +226,7 @@ class _picdataState extends State<picdata> {
                   ),
                    child: Center(
                         child: Text("3", style: TextStyle(
-                          color: Colors.white,
+                        color: Color(0xFFedb97b),
                           fontSize: 70,
                           fontWeight: FontWeight.bold,
                         ),),
@@ -269,6 +271,7 @@ class _picdataState extends State<picdata> {
                     textStyle: TextStyle(
                        fontFamily: "button",
                       fontSize: 20,
+                      fontWeight: FontWeight.bold,
                       color: Color(0xFFedb97b)
                     ),
                     onSubmit: () {

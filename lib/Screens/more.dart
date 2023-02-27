@@ -79,6 +79,7 @@ class _moredataState extends State<moredata> {
                             text: "Slide To Read",
                             textStyle: const TextStyle(
                                fontFamily: "button",
+                               fontWeight: FontWeight.bold,
                               fontSize: 20,
                               color: Color(0xFFedb97b)
                             ),
@@ -113,8 +114,12 @@ class _moredataState extends State<moredata> {
                       height: 150,
                       width: 100,
                       decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [Colors.teal , Color(0xFF043A39)]),
-                        image: DecorationImage(image: AssetImage("assets/sword.png")),
+                        gradient: LinearGradient
+                        (colors: 
+                        [Colors.teal , Color(0xFF043A39)]
+                        ),
+                        image: DecorationImage(
+                          image: AssetImage("assets/sword.png")),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
@@ -150,6 +155,7 @@ class _moredataState extends State<moredata> {
                         text: "Slide To Read",
                         textStyle: TextStyle(
                            fontFamily: "button",
+                           fontWeight: FontWeight.bold,
                           fontSize: 20,
                           color: Color(0xFFedb97b)
                         ),
@@ -218,6 +224,7 @@ class _moredataState extends State<moredata> {
                         textStyle: TextStyle(
                            fontFamily: "button",
                           fontSize: 20,
+                          fontWeight: FontWeight.bold,
                           color: Color(0xFFedb97b)
                         ),
                         onSubmit: () {
@@ -283,6 +290,7 @@ class _moredataState extends State<moredata> {
                         text: "Slide To Read",
                         textStyle: TextStyle(
                           fontSize: 20,
+                          fontWeight: FontWeight.bold,
                            fontFamily: "button",
                            color: Color(0xFFedb97b)
                         ),

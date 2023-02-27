@@ -1,3 +1,4 @@
+//SlidedScreen 
 import 'package:flutter/material.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:islamic_app/Screens/Home.dart';
@@ -7,6 +8,7 @@ import 'package:islamic_app/Screens/login.dart';
 import 'package:islamic_app/services/user_model.dart';
 import 'package:islamic_app/services/users_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+//Class of stateful widget
 class SlidedScreens extends StatefulWidget {
   const SlidedScreens({Key? key}) : super(key: key);
 
@@ -20,7 +22,7 @@ class SlidedScreensState extends State<SlidedScreens> {
   @override
   void initState() {
     super.initState();
-
+//Add slides
     slides.add(
       Slide(
         title: "History of Islam",
@@ -29,7 +31,7 @@ class SlidedScreensState extends State<SlidedScreens> {
           fontFamily: "font1",
           fontWeight: FontWeight.bold,
           color: Color(0xFFedb97b),
-          //ffe19c
+          
         ) , 
         description:
             "The History of Islam.Here such the important topics about Islamic history.",
@@ -126,6 +128,10 @@ class SlidedScreensState extends State<SlidedScreens> {
     // context,
     // MaterialPageRoute(builder: (context) => const login()),);
 
+// press on done button then chk if user login 
+// then go to main screen 
+//otherwise show login screen 
+//Using SharedPreferences
     var shared_pr = await SharedPreferences.getInstance();
     var logedin = shared_pr.getBool(Loginkey);
     if(logedin!=null){

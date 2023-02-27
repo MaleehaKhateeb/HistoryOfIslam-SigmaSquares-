@@ -240,7 +240,8 @@ class MenuState extends State<Menu> {
                Container(
                 child: InkWell(
                 onTap: () async{
-        UserStorage.removeUser();
+                  SharedPreferences pref =await SharedPreferences.getInstance();
+                  await UserStorage.removeUser();
          Navigator.push(
                  context,
                 MaterialPageRoute(builder: (context) => const login()),);

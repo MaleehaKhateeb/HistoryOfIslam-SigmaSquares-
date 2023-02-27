@@ -24,7 +24,8 @@ class _AgeAndSentAreaState extends State<AgeAndSentArea> {
       body: 
       Container(
           child: PhotoView(
-        //Display Image on Screen
+        //Display Image on Screen Zoom In 
+        //and Zoom out functions are available also in this Class
       imageProvider: AssetImage("assets/age&sent_area.jpg"),
       ),
         ),

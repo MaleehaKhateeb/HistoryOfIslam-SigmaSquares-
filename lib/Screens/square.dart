@@ -1,3 +1,4 @@
+// Widget for prophet screen / Buttons
 import 'package:flutter/material.dart';
 import 'package:islamic_app/Screens/prophetdetails.dart';
 class MySquare extends StatefulWidget {
@@ -9,13 +10,7 @@ class MySquare extends StatefulWidget {
   @override
   State<MySquare> createState() => _MySquareState();
 }
-
 class _MySquareState extends State<MySquare> {
-  
-
-  
-
-  
   @override
   Widget build(BuildContext context) {
     return Container(
