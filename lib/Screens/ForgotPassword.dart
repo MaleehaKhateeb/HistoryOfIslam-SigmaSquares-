@@ -7,15 +7,19 @@ import 'package:islamic_app/Widgets/BackgroundImage.dart';
 import 'package:islamic_app/Widgets/InputTextField.dart';
 import 'package:islamic_app/Widgets/PasswordTextField.dart';
 import 'package:islamic_app/Widgets/widgets.dart';
+import 'package:islamic_app/services/user_model.dart';
+import 'package:islamic_app/services/users_storage.dart';
 final econtroler = TextEditingController();
 class ForgotPassword extends StatefulWidget {
-  const ForgotPassword({Key? key}) : super(key: key);
+  
+  ForgotPassword({Key? key}) : super(key: key);
 
   @override
   State<ForgotPassword> createState() => _ForgotPasswordState();
 }
 
 class _ForgotPasswordState extends State<ForgotPassword> {
+  
    //Size size = MediaQuery.of(context).size;
     bool emailMatched = false;
   @override
@@ -97,10 +101,37 @@ class _ForgotPasswordState extends State<ForgotPassword> {
       // decoration: BoxDecoration(borderRadius:BorderRadius.circular(16),
       // ),
       
-       Buttons(buttontext: "Verify", onTap: () {
-         Navigator.push(
+       Buttons(buttontext: "Verify", onTap: ()async {
+       List<UserModel?> emailchk = await UserStorage.getAllUsersData();
+         bool emailmat = false;
+                for (var element in emailchk) {
+                  if (element?.email == econtroler.text) {
+                    emailmat= true;
+                }
+                }
+                if(!emailmat){
+                     ScaffoldMessenger.of(context).
+              showSnackBar(const SnackBar(
+                backgroundColor: Colors.red, 
+                content: Text("Incorrect email")));
+                  }
+                  else{
+                   
+                    ScaffoldMessenger.of(context).
+                  showSnackBar(const SnackBar(
+                backgroundColor: Colors.green, 
+                content: Text("Successfully verified")));
+                  UserModel? emailch = await UserStorage.getLoggedinUser();
+                Navigator.pushReplacement(
                  context,
-                MaterialPageRoute(builder: (context) => const emailcheck()),);
+                MaterialPageRoute(builder: (context) =>  emailcheck(
+                  user_model: emailch,
+                  
+                )),);
+                 }
+                
+      
+      
         
         
       //  print(emailMatched);

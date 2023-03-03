@@ -46,11 +46,11 @@ class MyApp extends StatelessWidget {
      routes: {
       '/':(context) => const  SlidedScreens(),
       '/login' : (context) => const login(),
-      '/forgot_password':(context) => const ForgotPassword(),
+      
       '/register':(context) => const CreateNewAccount(),
       '/Main' :(context) => const Main(),
       '/Home':(context) => const Home(),
-      '/Emailchk' : ((context) => const emailcheck()),
+      
       '/Pdfbook' :(context) => const pdfbook(),
       '/prophet' :(context) => const prophet(),
       '/pic-data' :(context) => const picdata(),

@@ -36,7 +36,7 @@ class UserStorage {
     var json = jsonDecode(data!);
     return UserModel.fromJson(json);
   }
-
+ 
 //Add data / User in usermodel
   static addUser(UserModel user) async {
     List<UserModel?> users = await getAllUsersData();
@@ -47,6 +47,30 @@ class UserStorage {
     }
     print(usersStringList);
     await preferences.setStringList(allUsersData, usersStringList);
+  }
+
+
+
+  // update password
+  static updateUserPassword(UserModel user) async {
+    bool updated = false;
+    List<UserModel?> users = await getAllUsersData();
+    for (var tempuser in users) {
+      if(
+        user.displayName == tempuser!.displayName 
+        &&
+        user.email == tempuser.email){
+        tempuser.password = user.password;
+        updated = true;
+      }
+    }
+    print(users);
+    List<String> usersStringList = [];
+    for (var element in users) {
+      usersStringList.add(jsonEncode(element!.toJson()));
+    }
+    await preferences.setStringList(allUsersData, usersStringList);
+    return updated;
   }
 
 //List of User Model to chk when user enter data for login 

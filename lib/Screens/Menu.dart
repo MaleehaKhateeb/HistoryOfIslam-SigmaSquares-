@@ -20,7 +20,6 @@ class Menu extends StatefulWidget {
 }
 
 class MenuState extends State<Menu> {
-  static const String Logoutkey = "Logout";
   @override
   Widget build(BuildContext context) {
     return  Container(
@@ -240,9 +239,10 @@ class MenuState extends State<Menu> {
                Container(
                 child: InkWell(
                 onTap: () async{
-                  SharedPreferences pref =await SharedPreferences.getInstance();
-                  await UserStorage.removeUser();
-         Navigator.push(
+                var shared = await SharedPreferences.getInstance();
+            await UserStorage.removeUser();
+                
+               Navigator.push(
                  context,
                 MaterialPageRoute(builder: (context) => const login()),);
                 

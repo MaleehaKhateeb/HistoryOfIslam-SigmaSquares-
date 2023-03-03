@@ -7,7 +7,8 @@ import 'package:islamic_app/Screens/ForgotPassword.dart';
 import 'package:islamic_app/Widgets/BackgroundImage.dart';
 import 'package:islamic_app/Widgets/widgets.dart';
 import 'package:islamic_app/Widgets/Button.dart';
-import 'package:islamic_app/services/user_model.dart'; 
+import 'package:islamic_app/services/user_model.dart';
+import 'package:islamic_app/services/users_storage.dart'; 
 import 'package:shared_preferences/shared_preferences.dart';
 final pwd_controller = TextEditingController();
 final email_controller = TextEditingController();
@@ -58,9 +59,12 @@ class _loginState extends State<login> {
                   inputAction: TextInputAction.done,
                   inputType:TextInputType.name),
               GestureDetector(
-                onTap:() => Navigator.push(
+                onTap:(){
+                    Navigator.push(
                   context, 
-                   MaterialPageRoute(builder: (context) => const ForgotPassword()),),
+                   MaterialPageRoute(builder: (context) => 
+                    ForgotPassword()),);
+                } ,
                    child:Container(
                    height:size.height* 0.052,
                    width:size.width* 0.52,

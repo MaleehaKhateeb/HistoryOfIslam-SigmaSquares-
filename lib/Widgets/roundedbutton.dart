@@ -37,8 +37,9 @@ class _RoundedButtonState extends State<RoundedButton> {
         child: Buttons(
           buttontext: "Login", 
           onTap: ()async{
-          //var shared_pr = await SharedPreferences.getInstance();
-          //when user click on ogin button 
+          var shared_pr = await SharedPreferences.getInstance();
+          shared_pr.setBool(SlidedScreensState.Loginkey, true);
+          //when user click on login button 
           //then chk user data is in UserModel 
            List<UserModel?> allusers = await UserStorage.getAllUsersData();
             print(allusers);
@@ -60,6 +61,8 @@ class _RoundedButtonState extends State<RoundedButton> {
             // } else {
               
             // }
+            //Loop for checking the login users matched or not
+            //If matched then set the all settings according to that user's settings
             for (var element in allusers) {
               if (element?.email == email_controller.text.toString()
               &&

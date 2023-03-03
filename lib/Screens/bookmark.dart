@@ -1,5 +1,8 @@
+
+//import 'dart:html';
+
 import 'package:flutter/material.dart';
-import 'package:slide_to_act/slide_to_act.dart';
+import 'package:syncfusion_flutter_pdf/pdf.dart';
 class bookmark extends StatefulWidget {
   const bookmark({Key? key}) : super(key: key);
 
@@ -8,9 +11,22 @@ class bookmark extends StatefulWidget {
 }
 
 class _bookmarkState extends State<bookmark> {
-  @override
-  Widget build(BuildContext context) {
   
+  @override 
+  Widget build(BuildContext context) {
+    //Load the existing PDF document.
+// final PdfDocument document =
+//     PdfDocument(inputBytes: File('input.pdf').readAsBytesSync());
+// //Create a document bookmark.
+// final PdfBookmark bookmark = document.bookmarks.add('Page 1');
+// //Set the destination page and location.
+// bookmark.destination = PdfDestination(document.pages[1], Offset(20, 20));
+// //Set the bookmark color.
+// bookmark.color = PdfColor(255, 0, 0);
+// //Save the document.
+// File('bookmark.pdf').writeAsBytes(await document.save());
+// //Dispose the document.
+// document.dispose();
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -23,16 +39,9 @@ class _bookmarkState extends State<bookmark> {
         backgroundColor: Color(0xFF043A39),
         centerTitle: true,
       ),
-      body: Center(
-        child: Text(
-          "Comming soon" ,
-           style: TextStyle(
-            fontSize: 30,
-            color: Color(0xFF043A39),
-            fontWeight: FontWeight.bold,
-            fontStyle: FontStyle.italic,
-          ),
-        ),
+      body: Container(
+        
+        
       )
      );
   }

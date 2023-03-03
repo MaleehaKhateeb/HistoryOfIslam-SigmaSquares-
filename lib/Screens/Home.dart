@@ -6,6 +6,7 @@ import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:islamic_app/Book.dart';
 import 'package:islamic_app/Bookmain.dart';
+import 'package:islamic_app/Screens/Changepassword.dart';
 import 'package:islamic_app/Screens/body.dart';
 import 'package:islamic_app/Screens/bookmark.dart';
 import 'package:islamic_app/Screens/drawer.dart';
@@ -15,6 +16,9 @@ import 'package:islamic_app/Screens/prophet.dart';
 import 'package:islamic_app/Screens/prophet/views/prophet_list.dart';
 import 'package:islamic_app/Widgets/roundedbutton.dart';
 import'package:flutter/src/material/bottom_navigation_bar.dart';
+import 'package:islamic_app/services/user_model.dart';
+import 'package:islamic_app/services/users_storage.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../Widgets/Colors.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 class Home extends StatefulWidget {
@@ -64,7 +68,8 @@ class _HomeState extends State<Home> {
       ),),centerTitle: true,
     elevation:0,
     actions: [
-      IconButton(onPressed: (){
+      IconButton(onPressed: ()async {
+        UserModel? loggedInUser = await UserStorage.getLoggedinUser();
         showMaterialModalBottomSheet(
          shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(
@@ -72,7 +77,8 @@ class _HomeState extends State<Home> {
           )
          ),
   context: context,
-  builder: (context) => SingleChildScrollView(
+  builder: (context) {
+    return SingleChildScrollView(
     controller: ModalScrollController.of(context),
         child: Stack(
           alignment: AlignmentDirectional.topCenter,
@@ -90,68 +96,76 @@ class _HomeState extends State<Home> {
               borderRadius: BorderRadius.circular(18),
              color: Colors.white,
               ),
-            child: Column(
-              children: [
-                Container(
-                  child: InkWell(
-                  onTap: (){},             
-                 child: Padding(padding: EdgeInsets.all(15),
-                 
-                      child:
-                       Text("Maleeha Khateeb",
+              
+            child: Center(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Row(
+                      children: [
+                        Icon(Icons.person,color: Colors.teal,),
+                          Padding(padding: EdgeInsets.all(8)),
+                        Text("${loggedInUser?.displayName.toString()}",
+                         style: TextStyle(
+                          color: Colors.teal,
+                          fontSize: 20)
+                        ),
+                      ],
+                    ),
+                  ),
+                  Divider(
+                     indent: 15,
+                  endIndent: 15,
+                    thickness: 3,
+                    color: Color.fromARGB(255, 19, 77, 71),),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
+                    children: [
+                      Icon(Icons.email,color: Colors.teal,),
+                        Padding(padding: EdgeInsets.all(8)),
+                      Text("${loggedInUser?.email.toString()}",
                        style: TextStyle(
-                         fontFamily: "button",
-                        fontSize: 20,
-                        color:Color.fromARGB(255, 1, 97, 87),
-                         
-                       ),),
-                      ),
+                          color: Colors.teal,
+                          fontSize: 20),)
+                    ],
+                  ),
                 ),
-                ),
-                Divider(color: Colors.teal,thickness: 2,
-                indent: 20,
-                height: 2,
-               endIndent: 20,),
-               Container(
-                  child: InkWell(
-                  onTap: (){},             
-                 child: Padding(padding: EdgeInsets.all(15),
-                 
-                      child:
-                       Text("Manahil",
-                       style: TextStyle(
-                         fontFamily: "button",
-                        fontSize: 20,
-                        color:Color.fromARGB(255, 1, 97, 87),
-                         
-                       ),),
-                      ),
-                ),
-                ),
-                 Divider(color: Colors.teal,thickness: 2,
-                indent: 20,
-                height: 2,
-               endIndent: 20,),
-               Container(
-                  child: InkWell(
-                  onTap: (){},             
-                 child: Padding(padding: EdgeInsets.all(15),
-                 
-                      child:
-                       Text("Musfirah",
-                       style: TextStyle(
-                         fontFamily: "button",
-                        fontSize: 20,
-                        color:Color.fromARGB(255, 1, 97, 87),
-                         
-                       ),),
-                      ),
-                ),
-                ),]
-          ),
+                 Divider(
+                  indent: 15,
+                  endIndent: 15,
+                    thickness: 3,
+                    color: Color.fromARGB(255, 19, 77, 71),),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
+                    children: [
+                      Icon(Icons.lock,color: Colors.teal,),
+                      Padding(padding: EdgeInsets.all(12)),
+                      
+                      InkWell(
+                        onTap: (){
+                          Navigator.push(context, 
+                          MaterialPageRoute(builder:
+                           (context)=> Changepass(
+                            usermodel: loggedInUser,)));
+                        },
+                        child: Text("Change password",
+                        style: TextStyle(
+                          color: Colors.red,
+                          fontSize: 25
+                        ),))
+                    ],
+                  ),
+                )
+                ],
+              ),
+            )
           ),]
         ),
-    ),
+    );
+  },
     
 );
       }, icon: Icon(FontAwesomeIcons.userLarge),color: Color(0xFFedb97b),),

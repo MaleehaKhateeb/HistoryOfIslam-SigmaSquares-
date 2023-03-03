@@ -1,69 +1,61 @@
-import'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:islamic_app/Screens/drawer.dart';
 import 'package:islamic_app/Widgets/Button.dart';
+import 'package:islamic_app/Widgets/Colors.dart';
+import 'package:islamic_app/Widgets/PasswordTextField.dart';
+
 import 'package:islamic_app/services/user_model.dart';
 import 'package:islamic_app/services/users_storage.dart';
-
-import '../Widgets/BackgroundImage.dart';
-import '../Widgets/Colors.dart';
-import '../Widgets/PasswordTextField.dart';
-
-//Controller for get the values of Textfields
-final pcontroller = TextEditingController();
-final pwcontroller  = TextEditingController();
- 
-class emailcheck extends StatefulWidget {
-  UserModel? user_model;
- emailcheck({Key? key, 
-required this.user_model
-}) : super(key: key);
+class Changepass extends StatefulWidget {
+  UserModel? usermodel;
+  Changepass({Key? key, required this.usermodel}) : super(key: key);
 
   @override
-  State<emailcheck> createState() => _emailcheckState();
+  State<Changepass> createState() => _ChangepassState();
 }
 
-class _emailcheckState extends State<emailcheck> {
-  
+class _ChangepassState extends State<Changepass> {
+  final pwscontroller= TextEditingController();
+  final psscontroller = TextEditingController();
+
+
 
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Stack(
-      children: [
-        BackgroundImage(
-          image: "assets/Masjid welcome.png"),
-        Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar:AppBar(
-            title: Text("Forgot Password",
-            style: bodytext,),
-            centerTitle: true,
-            backgroundColor: dark.withOpacity(0.8),
-            elevation: 0,
-            leading: IconButton(
-              onPressed: (){
-                Navigator.pop(context);
-              },
-              icon: Icon(
-                Icons.arrow_back_ios_new,color:Colors.white) ,),
-          ) ,
+    
+    Size size =MediaQuery.of(context).size;
+    return Scaffold(
+      backgroundColor:  Color.fromARGB(255, 2, 62, 61),
+      appBar:AppBar(
+           backgroundColor: Color.fromARGB(255, 2, 46, 45),
+      title: Text("Change password",style: TextStyle(
+        fontFamily: "GreatVibes",
+        color: Color(0xFFedb97b),
+        fontSize: 28
+      ),),centerTitle: true,
+      ),
         body:Column(
         children: [
           Container(
             margin:EdgeInsets.only(top: 50, left: 5) ,
           ),
           passwordInput(
-            cont: pcontroller,
+            cont: pwscontroller,
             icon: FontAwesomeIcons.lock,
-             hint: "New Password", 
+             hint: "Your Password", 
              inputType: TextInputType.name,
               inputAction: TextInputAction.next,
               ),
           passwordInput(
-            cont: pwcontroller,
+            cont: psscontroller,
             icon: FontAwesomeIcons.lock, 
-            hint: "Confirm Password", 
+            hint: "New Password", 
             inputType: TextInputType.name, 
             inputAction: TextInputAction.done,
             ),
@@ -77,16 +69,18 @@ class _emailcheckState extends State<emailcheck> {
                       ),),
             Buttons(
               buttontext: "Done", onTap: ()async{
-                if(pcontroller.text.isEmpty){
+                if(pwscontroller.text.isEmpty){
                   ScaffoldMessenger.of(context).
-              showSnackBar(const SnackBar(backgroundColor: Colors.red, content: Text("Enter old password")));
+              showSnackBar(const SnackBar(
+                backgroundColor: Colors.red,
+                 content: Text("Enter old password")));
               return;
                 }
                 List<UserModel?> passdata = await UserStorage.getAllUsersData();
-                print(widget.user_model);
+                print(widget.usermodel);
                 bool passMatched = false;
                 for (var element in passdata) {
-                  if (element?.password == pcontroller.text) {
+                  if (element?.password == pwscontroller.text) {
                     passMatched = true;
                 }
 
@@ -96,25 +90,27 @@ class _emailcheckState extends State<emailcheck> {
               showSnackBar(const SnackBar(backgroundColor: Colors.red, content: Text("Incorrect password")));
                   }
                   else{
-                    if(pwcontroller.text.isEmpty){
+                    if(psscontroller.text.isEmpty){
                       ScaffoldMessenger.of(context).
               showSnackBar(const SnackBar(backgroundColor: Colors.red, content: Text("Enter new password")));
               return; 
                     }
                     else{
-                      widget.user_model!.password = pwcontroller.text;
-                      if(await UserStorage.updateUserPassword(
-                        widget.user_model!)){
-              ScaffoldMessenger.of(context).
+                      widget.usermodel!.password = psscontroller.text;
+                      if(await UserStorage.updateUserPassword(widget.usermodel!)){
+            ScaffoldMessenger.of(context).
               showSnackBar(const SnackBar(backgroundColor: Colors.green, content: Text("Password updated.")));
               
                       }
                     }
                   }
+                
+      //               Navigator.push(
+      //                       context,
+      //                       MaterialPageRoute(builder: (context) => const MyDrawer()),);
       })
         ],
-      ), 
-    ),
-      ]);
+      ),
+    );
   }
 }

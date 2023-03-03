@@ -18,10 +18,10 @@ class SlidedScreens extends StatefulWidget {
 class SlidedScreensState extends State<SlidedScreens> {
   List<Slide> slides = [];
   static const String Loginkey = "Login";
-  
   @override
   void initState() {
     super.initState();
+    
 //Add slides
     slides.add(
       Slide(
@@ -124,35 +124,35 @@ class SlidedScreensState extends State<SlidedScreens> {
   void onDonePress()
    async 
   {
-    //  Navigator.pushReplacement(
-    // context,
-    // MaterialPageRoute(builder: (context) => const login()),);
-
 // press on done button then chk if user login 
 // then go to main screen 
 //otherwise show login screen 
 //Using SharedPreferences
     var shared_pr = await SharedPreferences.getInstance();
     var logedin = shared_pr.getBool(Loginkey);
+    //If user login 
     if(logedin!=null){
       if(logedin){
-        // if (UserStorage.loggedinUserData != null) {
+        //If user login then go to main screen 
           Navigator.pushReplacement(
     context,
     MaterialPageRoute(builder: (context) => const MyDrawer()),);
-    // } 
+    
         }
+        //otherwise go to login screen 
       else{
          Navigator.pushReplacement(
     context,
     MaterialPageRoute(builder: (context) => const login()),);
       }
-    }else{
+    }
+       //otherwise go to login screen 
+    else{
        Navigator.pushReplacement(
     context,
     MaterialPageRoute(builder: (context) => const login()),);
     }
-   
+    
  
     print("End of slides");
   }
